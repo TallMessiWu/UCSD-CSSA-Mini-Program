@@ -10,7 +10,7 @@
   show-menu-by-longpress>
 </image>
 <view>
-  <navigator class="link" url="/pages/class/class" open-type="redirect">跳转到class</navigator>
+  <navigator class="link" url="/pages/class/class" open-type="redirect">整活</navigator>
 </view>
 <scroll-view scroll-x="{{true}}">
   <view class ="scrOut">
