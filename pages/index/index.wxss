@@ -21,6 +21,7 @@ image{
 }
 .link{
   height: 40px;
+  color: blue
 }
 
 .scrOut{
