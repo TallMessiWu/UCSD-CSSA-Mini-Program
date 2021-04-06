@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/wenzhang/wenzhang.wxml",
     "pages/articles/articles.wxml",
-    "pages/articles/articles"
+    "pages/articles/articles",
+    "pages/class_chat/class_chat"
   ],
   "window": {
     "backgroundTextStyle": "light",
