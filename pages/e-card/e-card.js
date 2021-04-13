@@ -1,4 +1,4 @@
-// pages/articles/articles.js
+// pages/e-card/e-card.js
 Page({
 
   /**

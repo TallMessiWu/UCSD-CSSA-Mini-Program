@@ -1,6 +1,0 @@
-<!--pages/class/class.wxml-->
-<swiper class = "banner">
-  <swiper-item>111</swiper-item>
-  <swiper-item><image src="/images/CSSA-logo.jpg" mode="heightFix"></image></swiper-item>
-  <swiper-item>333</swiper-item>
-</swiper>

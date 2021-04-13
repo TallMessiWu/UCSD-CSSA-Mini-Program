@@ -1,1 +1,14 @@
 /* pages/articles/articles.wxss */
+
+#search-bar {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40rpx;
+}
+
+.hr{
+    height: 3px;
+    width: 63%;
+    background-color:gray;
+    margin: -11rpx 40rpx 10rpx 40rpx;
+}

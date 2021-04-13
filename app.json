@@ -1,15 +1,47 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/articles/articles",
-    "pages/class/class"
+    "pages/studyGroup/studyGroup",
+    "pages/e-card/e-card",
+    "pages/business/business"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999999",
+    "selectedColor": "cc1004",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/articles/articles",
+        "text": "文章",
+        "iconPath": "images/CSSA-logo.jpg",
+        "selectedIconPath": "images/CSSA-logo.jpg"
+      },
+      {
+        "pagePath": "pages/studyGroup/studyGroup",
+        "text": "课友群",
+        "iconPath": "images/CSSA-logo.jpg",
+        "selectedIconPath": "images/CSSA-logo.jpg"
+      },
+      {
+        "pagePath": "pages/e-card/e-card",
+        "text": "电子卡",
+        "iconPath": "images/CSSA-logo.jpg",
+        "selectedIconPath": "images/CSSA-logo.jpg"
+      },
+      {
+      "pagePath": "pages/business/business",
+      "text": "商家",
+      "iconPath": "images/CSSA-logo.jpg",
+      "selectedIconPath": "images/CSSA-logo.jpg"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,2 +1,9 @@
 <!--pages/articles/articles.wxml-->
-<text>pages/articles/articles.wxml</text>
+
+<view id="content">
+    <view id="search-bar">
+        <input id="search-input" type="input" placeholder="Search..." auto-focus/>
+        <button id="seach-btn" size="mini">搜索</button>
+    </view>
+    <view class="hr"></view>
+</view>

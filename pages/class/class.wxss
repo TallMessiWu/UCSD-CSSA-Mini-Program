@@ -1,9 +1,0 @@
-/* pages/class/class.wxss */
-.banner{
-  border: green;
-  height: 300px;
-  border: 1px solid red
-}
-.banner image{
-  height: 295rpx;
-}
