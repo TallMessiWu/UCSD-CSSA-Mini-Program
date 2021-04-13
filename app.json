@@ -20,26 +20,26 @@
       {
         "pagePath": "pages/articles/articles",
         "text": "文章",
-        "iconPath": "images/CSSA-logo.jpg",
-        "selectedIconPath": "images/CSSA-logo.jpg"
+        "iconPath": "images/icons/文章黑.png",
+        "selectedIconPath": "images/icons/文章红.png"
       },
       {
         "pagePath": "pages/studyGroup/studyGroup",
         "text": "课友群",
-        "iconPath": "images/CSSA-logo.jpg",
-        "selectedIconPath": "images/CSSA-logo.jpg"
+        "iconPath": "images/icons/群黑.png",
+        "selectedIconPath": "images/icons/群红.png"
       },
       {
         "pagePath": "pages/e-card/e-card",
         "text": "电子卡",
-        "iconPath": "images/CSSA-logo.jpg",
-        "selectedIconPath": "images/CSSA-logo.jpg"
+        "iconPath": "images/icons/卡黑.png",
+        "selectedIconPath": "images/icons/卡红.png"
       },
       {
       "pagePath": "pages/business/business",
       "text": "商家",
-      "iconPath": "images/CSSA-logo.jpg",
-      "selectedIconPath": "images/CSSA-logo.jpg"
+      "iconPath": "images/icons/商家黑.png",
+      "selectedIconPath": "images/icons/商家红.png"
       }
     ]
   },
