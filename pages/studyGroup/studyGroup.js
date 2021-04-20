@@ -1,11 +1,8 @@
 // pages/studyGroup/studyGroup.js
 Page({
 
-  /**
-   * Page initial data
-   */
-  data: {
-
+  mytap: function(res){
+    console.log(res.currentTarget.dataset.item)
   },
 
   /**

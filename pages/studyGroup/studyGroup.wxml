@@ -7,7 +7,7 @@
     </view>
     <view class="hr"></view>
     <block wx:for="{{language}}" wx:key="index">
-      <view class='text-content'>{{item}}</view> 
+      <view class='text-content' bindtap="mytap" data-item="{{item}}">{{item}}</view> 
     </block>
 </view>
 
