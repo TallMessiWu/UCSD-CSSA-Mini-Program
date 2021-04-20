@@ -3,7 +3,8 @@
 <view id="content">
     <view id="search-bar">
         <input id="search-input" type="input" placeholder="Search..." auto-focus/>
-        <button id="seach-btn" size="mini">搜索</button>
+        <button id="search-btn" size="mini">搜索</button>
+        <button id="catalogue" size="mini">目录</button>
     </view>
     <view class="hr"></view>
 </view>

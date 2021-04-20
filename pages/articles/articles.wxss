@@ -12,3 +12,15 @@
     background-color:gray;
     margin: -11rpx 40rpx 10rpx 40rpx;
 }
+#search-btn{
+    margin: 0 auto;
+    width: 15%;
+    margin-right: 0rpx;
+  }
+  
+#catalogue{
+    margin: 0 auto;
+    width: 15%;
+    margin-right: 0rpx;
+    margin-left: 0rpx;
+  }
