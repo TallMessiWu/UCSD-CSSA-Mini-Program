@@ -1,13 +1,18 @@
-page{
+page {
   background-color: #F5F5F5
 }
 
-.container{
+.qr {
+  height: 650rpx;
+  width: 560rpx;
+}
+
+.container {
   padding: 10px 20px;
   align-content: center;
 }
 
-.text-content{
+.text-content {
   padding: 10px;
   align-content: center;
   border-bottom: 1rpx solid #F5F5F5;
@@ -20,22 +25,22 @@ page{
   margin-left: 40rpx;
 }
 
-.hr{
+.hr {
   height: 3px;
   width: 60%;
-  background-color:gray;
+  background-color: gray;
   margin: -11rpx 40rpx 10rpx 40rpx;
 }
 
-#search-btn{
+#search-btn {
   margin: 0 auto;
   width: 15%;
   margin-right: 0rpx;
 }
-#catalogue{
+
+#catalogue {
   margin: 0 auto;
   width: 15%;
   margin-right: 0rpx;
   margin-left: 0rpx;
 }
-

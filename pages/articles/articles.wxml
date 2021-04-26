@@ -1,14 +1,18 @@
 <!--pages/articles/articles.wxml-->
 
 <view id="content">
-    <view id="search-bar">
-        <input id="search-input" type="input" placeholder="Search..." auto-focus/>
-        <button id="search-btn" size="mini">搜索</button>
-        <button id="catalogue" size="mini">目录</button>
+    <view id="search-bar"
+        style="width: 710rpx; height: 82rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+        <input style="width: 438rpx; height: 82rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"
+            id="search-input" type="input" placeholder="Search..." auto-focus />
+        <button id="search-btn" size="mini"
+            style="width: 136rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
+        <button id="catalogue" size="mini"
+            style="width: 142rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">目录</button>
     </view>
     <view class="hr"></view>
 </view>
 
 <view>
-新生手册
+    新生手册
 </view>

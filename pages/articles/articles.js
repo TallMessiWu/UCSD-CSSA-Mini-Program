@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    logo: "cloud://ucsdcssa-5gxqhwwc12d1b1bf.7563-ucsdcssa-5gxqhwwc12d1b1bf-1305742996/CSSA-logo.jpg",
   },
 
   /**

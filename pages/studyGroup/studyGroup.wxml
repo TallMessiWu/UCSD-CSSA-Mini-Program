@@ -1,17 +1,23 @@
 <!--pages/studyGroup/studyGroup.wxml-->
 <view id="content">
-    <view id="search-bar">
-        <input id="search-input" type="input" placeholder="Search..." auto-focus/>
-        <button id="search-btn" size="mini">搜索</button>
-        <button id="catalogue" size="mini">目录</button>
-    </view>
-    <view class="hr"></view>
-    <block wx:for="{{language}}" wx:key="index">
-      <view class='text-content' bindtap="mytap" data-item="{{item}}">{{item}}</view> 
-    </block>
+  <view id="search-bar"
+    style="width: 710rpx; height: 82rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <input style="width: 440rpx; height: 82rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"
+      id="search-input" type="input" placeholder="Search..." auto-focus />
+    <button id="search-btn" size="mini"
+      style="width: 140rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
+    <button id="catalogue" size="mini"
+      style="width: 142rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">目录</button>
+  </view>
+  <view class="hr"></view>
+  <block wx:for="{{classes}}" wx:key="index">
+    <view class='text-content' bindtap="mytap" data-item="{{item}}">{{item}}</view>
+  </block>
 </view>
-
-<view>
-  
-</view>
-
+<modal title="{{qr_title}}" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel" id="classQR"
+  confirm-text="{{confirm_text}}" cancel-text="关闭">
+  <view>
+    <image class="qr" id="qr" src="{{qr_path}}" mode="aspectFill" show-menu-by-longpress="True"></image>
+  </view>
+  <view>如果课友群二维码无法加入，请联系小助手加群</view>
+</modal>

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/articles/articles",
     "pages/studyGroup/studyGroup",
+    "pages/articles/articles",
     "pages/e-card/e-card",
     "pages/business/business"
   ],
