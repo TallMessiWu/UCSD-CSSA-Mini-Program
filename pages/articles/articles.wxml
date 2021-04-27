@@ -4,7 +4,7 @@
     <view id="search-bar"
         style="width: 710rpx; height: 82rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
         <input style="width: 438rpx; height: 82rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"
-            id="search-input" type="input" placeholder="搜索与目录功能开发中" auto-focus />
+            id="search-input" type="input" placeholder="搜索与目录功能开发中" />
         <button id="search-btn" size="mini"
             style="width: 136rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
         <button id="catalogue" size="mini"
