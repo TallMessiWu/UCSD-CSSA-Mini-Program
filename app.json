@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/articles/articles",
     "pages/studyGroup/studyGroup",
+    "pages/articles/articles",
     "pages/e-card/e-card",
     "pages/business/business"
   ],
@@ -16,10 +16,9 @@
     "color": "#999999",
     "selectedColor": "cc1004",
     "borderStyle": "black",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/articles/articles",
-        "text": "文章",
+        "text": "校园攻略",
         "iconPath": "images/icons/文章黑.png",
         "selectedIconPath": "images/icons/文章红.png"
       },
@@ -36,10 +35,10 @@
         "selectedIconPath": "images/icons/卡红.png"
       },
       {
-      "pagePath": "pages/business/business",
-      "text": "商家",
-      "iconPath": "images/icons/商家黑.png",
-      "selectedIconPath": "images/icons/商家红.png"
+        "pagePath": "pages/business/business",
+        "text": "商家",
+        "iconPath": "images/icons/商家黑.png",
+        "selectedIconPath": "images/icons/商家红.png"
       }
     ]
   },

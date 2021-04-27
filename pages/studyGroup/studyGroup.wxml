@@ -1,16 +1,16 @@
 <!--pages/studyGroup/studyGroup.wxml-->
 <view id="content">
   <view id="search-bar"
-    style="width: 710rpx; height: 82rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    style="width: 750rpx; height: 82rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
     <input style="width: 440rpx; height: 82rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"
-      id="search-input" type="input" placeholder="Search..." auto-focus />
-    <button id="search-btn" size="mini"
-      style="width: 140rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
-    <button id="catalogue" size="mini"
-      style="width: 142rpx; height: 82rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">目录</button>
+      id="search-input" type="input" bindinput="handleInputChange" placeholder="搜索..." focus="True"
+      bindconfirm="handleSearch" />
+    <button id="search-btn" size="mini" bindtap="handleSearch"
+      style="width: 140rpx; height: 82rpx; display: block; box-sizing: border-box; left: 29rpx; top: 0rpx; position: relative">搜索</button>
   </view>
-  <view class="hr"></view>
-  <block wx:for="{{classes}}" wx:key="index">
+  <view class="hr"
+    style="width: 538rpx; height: -15rpx; display: block; box-sizing: content-box; left: NaNrpx; top: NaNrpx"></view>
+  <block wx:for="{{filtered}}" wx:key="index">
     <view class='text-content' bindtap="mytap" data-item="{{item}}">{{item}}</view>
   </block>
 </view>

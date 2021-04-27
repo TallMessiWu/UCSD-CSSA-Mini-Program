@@ -1,1 +1,7 @@
 /* pages/e-card/e-card.wxss */
+text {
+  font-size: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
