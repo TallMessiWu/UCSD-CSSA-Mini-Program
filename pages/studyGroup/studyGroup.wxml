@@ -17,7 +17,7 @@
 <modal title="{{qr_title}}" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel" id="classQR"
   confirm-text="{{confirm_text}}" cancel-text="关闭">
   <view>
-    <image class="qr" id="qr" src="{{qr_path}}" mode="aspectFill" show-menu-by-longpress="True"></image>
+    <image class="qr" src="{{qr_path}}" mode="aspectFill" bindtap="imageTap" bindlongpress="imageTap" data-url="{{qr_path}}"></image>
   </view>
   <view>如果课友群二维码无法加入，请联系小助手加群</view>
 </modal>
