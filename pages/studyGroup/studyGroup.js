@@ -29,7 +29,7 @@ Page({
     const class_name = res.currentTarget.dataset.item
     this.setData({
       modalHidden: false,
-      qr_path: this.data.cloud_filepath + class_name + ".png",
+      qr_path: this.data.cloud_filepath + class_name + ".jpg",
       class: class_name,
       confirm_type: 0,
       confirm_text: "获取小助手二维码"
@@ -63,7 +63,7 @@ Page({
         confirm_text: "获取小助手二维码",
         confirm_type: 0,
         qr_title: "课友群二维码",
-        qr_path: this.data.cloud_filepath + this.data.class + ".png"
+        qr_path: this.data.cloud_filepath + this.data.class + ".jpg"
       });
     };
   },
@@ -114,7 +114,7 @@ Page({
     if (result.length == 1) {
       this.setData({
         modalHidden: false,
-        qr_path: this.data.cloud_filepath + result[0] + ".png",
+        qr_path: this.data.cloud_filepath + result[0] + ".jpg",
         class: result[0],
         confirm_type: 0,
         confirm_text: "获取小助手二维码"
