@@ -1,4 +1,6 @@
 /* pages/articles/articles.wxss */
+@import '/assets/styles/weui.wxss'
+
 
 #search-bar {
   display: flex;
@@ -11,6 +13,16 @@ text {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+
+.articles {
+  width: 100vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
 .hr {
