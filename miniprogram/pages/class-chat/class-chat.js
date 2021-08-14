@@ -45,7 +45,9 @@ Page({
                 validClasses.push(allClasses[idx])
             }
         }
-        this.setData({validClasses})
+        this.setData({
+            validClasses
+        })
     },
 
     onSearchCancel(event) {

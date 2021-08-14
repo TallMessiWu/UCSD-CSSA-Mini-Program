@@ -1,6 +1,6 @@
 <!--miniprogram/pages/welcome/welcome.wxml-->
-<l-capsule-bar hidden-capsule home-page="/pages/welcome/welcome" title="欢迎使用CSSA小程序" bg-color="#C22A1E" capsule-color="white"
-    title-color="white">
+<l-capsule-bar hidden-capsule home-page="/pages/welcome/welcome" title="欢迎使用CSSA小程序" bg-color="#C22A1E"
+    capsule-color="white" title-color="white">
     <view class="container">
         <l-avatar class="l-avatar1" placement="bottom" shape="circle" size="350" src="/images/CSSA-logo.jpg" />
         <!-- <text class="title">UCSD CSSA</text> -->
