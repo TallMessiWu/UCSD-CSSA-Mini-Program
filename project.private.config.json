@@ -1,0 +1,24 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/class-chat/class-chat",
+                    "pathName": "pages/class-chat/class-chat",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

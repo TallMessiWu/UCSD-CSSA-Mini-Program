@@ -1,0 +1,15 @@
+<!--components/class-group/index.wxml-->
+<view class="container f-class">
+    <l-collapse type='accordion'>
+        <block wx:for="{{classesByLetter}}" wx:key="index">
+            <l-collapse-item l-class="l-collapse-item" title="{{item}}">
+                <view class="item-container">
+                    <image mode="aspectFit" src="{{url + item + imgSuffix}}" bind:tap="onImageTap" bind:longpress="onImageTap"
+                        data-url="{{url + item + imgSuffix}}"></image>
+                    <l-button class="button" plain bind:tap="onImageTap" data-url="{{url + '小助手' + imgSuffix}}"
+                        shape="semicircle" type="error">如果课友群二维码失效，请点击此处联系小助手</l-button>
+                </view>
+            </l-collapse-item>
+        </block>
+    </l-collapse>
+</view>

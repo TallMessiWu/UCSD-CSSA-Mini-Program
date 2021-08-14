@@ -1,0 +1,23 @@
+{
+    "pages": [
+        "pages/welcome/welcome",
+        "pages/class-chat/class-chat"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#C22A1E",
+        "navigationStyle": "custom"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "usingComponents": {
+        "l-avatar": "/miniprogram_npm/lin-ui/avatar/index",
+        "l-button": "/miniprogram_npm/lin-ui/button/index",
+        "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
+        "l-index-list": "/miniprogram_npm/lin-ui/index-list/index",
+        "l-index-anchor": "/miniprogram_npm/lin-ui/index-anchor/index",
+        "l-collapse": "/miniprogram_npm/lin-ui/collapse/index",
+        "l-collapse-item": "/miniprogram_npm/lin-ui/collapse-item/index",
+        "l-capsule-bar": "/miniprogram_npm/lin-ui/capsule-bar/index",
+        "l-tab-bar":"/miniprogram_npm/lin-ui/tab-bar/index"
+    }
+}
