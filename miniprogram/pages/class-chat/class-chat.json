@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "class-group": "/components/class-group/index"
+  },
+  "enablePullDownRefresh": true
+}

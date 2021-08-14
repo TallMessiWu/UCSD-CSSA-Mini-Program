@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e ucsdcssa-5gxqhwwc12d1b1bf --n quickstartFunctions --r --project "C:\Users\tallm\OneDrive\Documents\资料\CSSA\CSSA小程序" --report

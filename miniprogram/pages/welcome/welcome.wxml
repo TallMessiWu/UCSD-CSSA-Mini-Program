@@ -1,0 +1,14 @@
+<!--miniprogram/pages/welcome/welcome.wxml-->
+<l-capsule-bar hidden-capsule home-page="/pages/welcome/welcome" title="欢迎使用CSSA小程序" bg-color="#C22A1E" capsule-color="white"
+    title-color="white">
+    <view class="container">
+        <l-avatar class="l-avatar1" placement="bottom" shape="circle" size="350" src="/images/CSSA-logo.jpg" />
+        <!-- <text class="title">UCSD CSSA</text> -->
+        <l-avatar class="l-avatar2" placement="bottom" shape="circle" size="100"
+            open-data="{{['userAvatarUrl', 'userNickName']}}" />
+        <!-- <text class="motto">欢迎使用CSSA小程序</text> -->
+        <view class="button-container" bind:tap="onTap">
+            <text class="button-text">开启小程序之旅</text>
+        </view>
+    </view>
+</l-capsule-bar>
