@@ -4,10 +4,10 @@
         <block wx:for="{{classesByLetter}}" wx:key="index">
             <l-collapse-item l-class="l-collapse-item" title="{{item}}">
                 <view class="item-container">
-                    <image mode="aspectFit" src="{{url + item + imgSuffix}}" bind:tap="onImageTap"
+                    <image mode="aspectFit" fn="getURL" src="{{url + item + imgSuffix}}" bind:tap="onImageTap"
                         bind:longpress="onImageTap" data-url="{{url + item + imgSuffix}}"></image>
-                    <l-button class="button" plain bind:tap="onImageTap" data-url="{{url + '小助手' + imgSuffix}}"
-                        shape="semicircle" type="error">如果课友群二维码失效，请点击此处联系小助手</l-button>
+                    <l-button class="button" plain="{{true}}" bind:lintap="onButtonTap" shape="semicircle" type="error">如果二维码失效，请点此联系小助手
+                    </l-button>
                 </view>
             </l-collapse-item>
         </block>

@@ -25,12 +25,22 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        onImageTap(event) {
+        async onImageTap(event) {
             let url = event.currentTarget.dataset.url;
+            // 后面的random用于保证图片不是之前缓存过的过期二维码
+            url = (await wx.cloud.getTempFileURL({fileList:[url]})).fileList[0].tempFileURL + "?v=" + Math.random()
             wx.previewImage({
-                urls: [url],
-                current: url
+                urls: [url]
             })
-        }
+        },
+
+        async onButtonTap(event) {
+            let url1 = this.data.url + "小助手1" + this.data.imgSuffix;
+            let url2 = this.data.url + "小助手2" + this.data.imgSuffix;
+            wx.previewImage({
+                urls: [url1, url2]
+            })
+        },
+
     }
 })

@@ -11,7 +11,7 @@
         </view>
 
         <view class="all-classes-container" wx:if="{{flag}}">
-            <l-index-list show-sidebar="" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}" class="index-list"
+            <l-index-list show-sidebar="{{false}}" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}" class="index-list"
                 l-sidebar-class="l-sidebar" l-selected-class="l-selected">
                 <block wx:for="{{classes}}" wx:key="index">
                     <view class="class-group-container">
@@ -21,8 +21,20 @@
                 </block>
             </l-index-list>
         </view>
-        <view wx:else class="search-result-container">
-            <class-group f-class="class-group" classesByLetter="{{validClasses}}"></class-group>
+
+        <view class="search-result-container" wx:else>
+            <l-index-list show-sidebar="" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}" class="index-list">
+                <view class="search-result">
+
+                    <class-group f-class="valid-classes" classesByLetter="{{validClasses}}"></class-group>
+
+                    <view wx:if="{{!flag && (validClasses.length == 0)}}" class="no-result">
+                        <text>未查找到关键词</text>
+                    </view>
+
+                </view>
+            </l-index-list>
         </view>
+
     </view>
 </l-capsule-bar>

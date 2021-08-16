@@ -1,11 +1,5 @@
 // miniprogram/pages/class-chat/class-chat.js
 
-import {
-    classes,
-    sidebarData,
-    allClasses
-} from "../../data/data.js"
-
 import deviceUtil from "../../miniprogram_npm/lin-ui/utils/device-util"
 
 Page({
@@ -18,9 +12,40 @@ Page({
         scrollTop: undefined,
         classes: [],
         sidebarData: [],
+        allClasses: [],
         validClasses: [],
         flag: true,
-        input: ""
+        input: "",
+        _classesId: "8f9ff639611a410d00aaa7ba5e2491d6"
+    },
+
+    // set classes and sidebarData and allClasses
+    async setClasses() {
+        let classes_collection = wx.cloud.database().collection("class_chat")
+        let classes = await (await classes_collection.doc(this.data._classesId)).get()
+        this.setData({
+            classes: classes.data.classes,
+            sidebarData: this.getSidebarData(classes.data.classes),
+            _allClasses: this.getAllClasses(classes.data.classes)
+        })
+    },
+
+    // process classes data and transform it into a list of Capital Letters
+    getSidebarData(classes) {
+        let sidebarData = []
+        for (let idx in classes) {
+            sidebarData.push(classes[idx].firstLetter)
+        }
+        return sidebarData
+    },
+
+    // put all classes into a list
+    getAllClasses(classes) {
+        let allClasses = []
+        for (let idx in classes) {
+            allClasses = allClasses.concat(classes[idx].classesByLetter)
+        }
+        return allClasses
     },
 
     // 页面监听函数
@@ -31,6 +56,7 @@ Page({
     },
 
     onSearch(event) {
+        let allClasses = this.data._allClasses
         let input = event.detail.value
         this.setData({
             input,
@@ -39,7 +65,7 @@ Page({
         input = input.replace(" ", "").toUpperCase()
         let validClasses = []
         for (let idx in allClasses) {
-            if (allClasses[idx].indexOf(input) === -1) {
+            if (allClasses[idx].replace(" ", "").indexOf(input) === -1) {
                 continue
             } else {
                 validClasses.push(allClasses[idx])
@@ -61,17 +87,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.setData({
-            classes,
-            sidebarData
-        })
+        this.setClasses()
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
     },
 
     /**

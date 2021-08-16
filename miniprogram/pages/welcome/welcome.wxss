@@ -31,11 +31,15 @@
     border: 1px solid #C22A1E;
     width: 200rpx;
     height: 80rpx;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     /* margin-top: 120rpx; */
+}
+
+.button-container-clicked {
+    background-color: #D4D4D4;
 }
 
 .button-text {
