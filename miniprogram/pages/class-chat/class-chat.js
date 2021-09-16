@@ -9,6 +9,7 @@ Page({
      */
     data: {
         capsuleBarHeight: deviceUtil.getNavigationBarHeight(),
+        title: "UCSD CSSA",
         scrollTop: undefined,
         classes: [],
         sidebarData: [],
@@ -16,17 +17,31 @@ Page({
         validClasses: [],
         flag: true,
         input: "",
-        _classesId: "8f9ff639611a410d00aaa7ba5e2491d6"
+        list: [
+            {
+                pagePath: "/pages/class-chat/class-chat",
+                text: "UCSD CSSA",
+                iconPath: "/images/icons/群黑.png",
+                selectedIconPath: "/images/icons/群红.png"
+            }, {
+                pagePath: "/pages/cssa-card/cssa-card",
+                text: "CSSA卡",
+                iconPath: "/images/icons/卡黑.png",
+                selectedIconPath: "/images/icons/卡红.png"
+            }
+        ]
     },
 
     // set classes and sidebarData and allClasses
     async setClasses() {
         let classes_collection = wx.cloud.database().collection("class_chat")
-        let classes = await (await classes_collection.doc(this.data._classesId)).get()
+        let classes = (await (await classes_collection.get())).data[0]
         this.setData({
-            classes: classes.data.classes,
-            sidebarData: this.getSidebarData(classes.data.classes),
-            _allClasses: this.getAllClasses(classes.data.classes)
+            title: classes.title,
+            ["list[0].text"]: classes.title,
+            classes: classes.classes,
+            sidebarData: this.getSidebarData(classes.classes),
+            _allClasses: this.getAllClasses(classes.classes)
         })
     },
 
@@ -93,8 +108,7 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
-    },
+    onReady: function () {},
 
     /**
      * 生命周期函数--监听页面显示

@@ -11,12 +11,20 @@
             "list": []
         },
         "miniprogram": {
-            "list": [{
-                "name": "pages/class-chat/class-chat",
-                "pathName": "pages/class-chat/class-chat",
-                "query": "",
-                "scene": null
-            }]
+            "list": [
+                {
+                    "name": "pages/class-chat/class-chat",
+                    "pathName": "pages/class-chat/class-chat",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/cssa-card/cssa-card",
+                    "pathName": "pages/cssa-card/cssa-card",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
     }
 }

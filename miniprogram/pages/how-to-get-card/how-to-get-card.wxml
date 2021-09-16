@@ -1,0 +1,5 @@
+<l-capsule-bar home-page="/pages/welcome/welcome" title="如何获取邀请码" bg-color="#C22A1E" capsule-color="white"
+    title-color="white">
+
+这里会显示如何获取CSSA卡邀请码
+</l-capsule-bar>

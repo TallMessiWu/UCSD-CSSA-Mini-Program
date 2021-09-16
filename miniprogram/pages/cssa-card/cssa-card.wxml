@@ -1,0 +1,59 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="CSSA卡" bg-color="#C22A1E" capsule-color="white"
+    title-color="white">
+
+    <!-- 总体容器 -->
+    <view class="container">
+
+        <!-- 登录 -->
+        <view class="cssa-card" hidden="{{loggedin}}">
+            <image class="logo" src="/images/CSSA-logo-name.png" mode="aspectFit"></image>
+            <text class="number">xxxx xxxx xxxx xxxx</text>
+            <!-- 灰色覆盖层 -->
+            <view class="login-mask"></view>
+            <l-button width="400" shape="semicircle" bg-color="#FF3030" bind:tap="onLogin">点击微信授权登录</l-button>
+        </view>
+
+
+        <!-- CSSA卡 -->
+        <view class="cssa-card" hidden="{{!loggedin}}" wx:if="{{purchased}}">
+            <image class="logo" src="/images/CSSA-logo-name.png" mode="aspectFit"></image>
+            <text class="number">{{cardNumber}}</text>
+        </view>
+
+        <!-- CSSA卡购买 -->
+        <view class="cssa-card" hidden="{{!loggedin}}" wx:else>
+            <image class="logo" src="/images/CSSA-logo-name.png" mode="aspectFit"></image>
+            <text class="number">{{cardNumber}}</text>
+            <view class="login-mask"></view>
+            <view class="form">
+                <l-input label="邀请码" placeholder="请输入邀请码" width="500" showRow="{{false}}" l-class="input" bind:lininput="onInput"></l-input>
+                <l-button width="100" shape="semicircle" bg-color="#FF3030" bind:tap="onConfirm" l-class="button">确认</l-button>
+            </view>
+            <l-button width="500" shape="semicircle" bg-color="#FF3030" bind:tap="onHow">如何获取邀请码？</l-button>
+            
+        </view>
+
+        <!-- CSSA卡介绍 -->
+        <view class="card-info">
+            <l-collapse type="accordion" expand-item-id="{{['0']}}">
+                <l-collapse-item title="CSSA卡介绍" l-class="l-collapse-item" item-id="0" l-title-class="l-title">
+                    <view class="description">
+                        <text class="description-text">- 美西南地区学联包括UCSD、UCLA、UCI、UCSB等众多学校联合推出的商家打折卡。
+
+                            - 适用于美西南地区所有CSSA合作商家。
+
+                            - 覆盖餐饮，旅游，美容美发等各个行业，以满足同学们的日常生活需求。
+
+                            - 仅需$10即可购买！！！终生享受美西南地区近百家店铺优惠。</text>
+                    </view>
+                </l-collapse-item>
+            </l-collapse>
+        </view>
+
+    </view>
+
+    <!-- 底部导航栏 -->
+    <l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />
+
+</l-capsule-bar>

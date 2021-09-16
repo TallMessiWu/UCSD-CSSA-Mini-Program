@@ -15,7 +15,7 @@ Page({
   },
 
   onTap: function (event) {
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/class-chat/class-chat',
     })
   },

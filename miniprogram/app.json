@@ -1,7 +1,9 @@
 {
     "pages": [
         "pages/welcome/welcome",
-        "pages/class-chat/class-chat"
+        "pages/class-chat/class-chat",
+        "pages/cssa-card/cssa-card",
+        "pages/how-to-get-card/how-to-get-card"
     ],
     "window": {
         "navigationBarBackgroundColor": "#C22A1E",
@@ -18,6 +20,24 @@
         "l-collapse": "/miniprogram_npm/lin-ui/collapse/index",
         "l-collapse-item": "/miniprogram_npm/lin-ui/collapse-item/index",
         "l-capsule-bar": "/miniprogram_npm/lin-ui/capsule-bar/index",
-        "l-tab-bar": "/miniprogram_npm/lin-ui/tab-bar/index"
+        "l-tab-bar": "/miniprogram_npm/lin-ui/tab-bar/index",
+        "l-card": "/miniprogram_npm/lin-ui/card/index",
+        "l-input": "/miniprogram_npm/lin-ui/input/index"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "backgroundColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/class-chat/class-chat",
+                "text": "组件"
+            },
+            {
+                "pagePath": "pages/cssa-card/cssa-card",
+                "text": "接口"
+            }
+        ]
     }
 }
