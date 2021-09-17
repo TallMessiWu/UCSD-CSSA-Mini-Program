@@ -41,9 +41,12 @@
     position: absolute;
     height: 400rpx;
     width: 634rpx;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.8);
     border-radius: 15px;
-    opacity: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form {
@@ -51,7 +54,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #FFFFFF;
     z-index: 10;
     border-radius: 15px;
     margin-bottom: 10rpx;

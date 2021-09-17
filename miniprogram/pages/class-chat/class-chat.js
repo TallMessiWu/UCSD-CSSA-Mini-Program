@@ -2,6 +2,8 @@
 
 import deviceUtil from "../../miniprogram_npm/lin-ui/utils/device-util"
 
+let classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+
 Page({
 
     /**
@@ -17,25 +19,23 @@ Page({
         validClasses: [],
         flag: true,
         input: "",
-        list: [
-            {
-                pagePath: "/pages/class-chat/class-chat",
-                text: "UCSD CSSA",
-                iconPath: "/images/icons/群黑.png",
-                selectedIconPath: "/images/icons/群红.png"
-            }, {
-                pagePath: "/pages/cssa-card/cssa-card",
-                text: "CSSA卡",
-                iconPath: "/images/icons/卡黑.png",
-                selectedIconPath: "/images/icons/卡红.png"
-            }
-        ]
+        list: [{
+            pagePath: "/pages/class-chat/class-chat",
+            text: "UCSD CSSA",
+            iconPath: "/images/icons/chat.png",
+            selectedIconPath: "/images/icons/chat-activated.png"
+        }, {
+            pagePath: "/pages/cssa-card/cssa-card",
+            text: "CSSA卡",
+            iconPath: "/images/icons/card.png",
+            selectedIconPath: "/images/icons/card-activated.png"
+        }],
     },
 
     // set classes and sidebarData and allClasses
     async setClasses() {
         let classes_collection = wx.cloud.database().collection("class_chat")
-        let classes = (await (await classes_collection.get())).data[0]
+        let classes = (await (await classes_collection.doc(classesId).get())).data
         this.setData({
             title: classes.title,
             ["list[0].text"]: classes.title,

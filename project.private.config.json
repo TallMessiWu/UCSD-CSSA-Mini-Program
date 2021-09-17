@@ -23,6 +23,18 @@
                     "pathName": "pages/cssa-card/cssa-card",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/welcome/welcome",
+                    "pathName": "pages/welcome/welcome",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/how-to-get-card/how-to-get-card",
+                    "pathName": "pages/how-to-get-card/how-to-get-card",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

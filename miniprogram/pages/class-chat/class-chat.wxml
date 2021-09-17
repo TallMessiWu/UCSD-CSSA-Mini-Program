@@ -1,53 +1,53 @@
 <!-- 顶部导航栏 -->
 <l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E"
     capsule-color="white" title-color="white">
-    <!-- 整体容器 -->
-    <view class="container">
+</l-capsule-bar>
 
-        <!-- 搜索栏 -->
-        <view class="search-bar-container">
-            <l-search-bar l-class="l-search-bar" placeholder="请输入你要搜索的课名..." value="{{input}}" shape="circle"
-                bg-color="#ffffff" show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch"
-                bind:lincancel="onSearchCancel" bind:linclear="onSearchCancel" />
-            <!-- 分割线 -->
-            <view class="hr"></view>
-        </view>
+<!-- 整体容器 -->
+<view class="container">
 
-    <!-- 课程列表容器 -->
-        <view class="all-classes-container" wx:if="{{flag}}">
-            <!-- 索引列表容器 -->
-            <l-index-list show-sidebar="{{false}}" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}"
-                class="index-list" l-sidebar-class="l-sidebar" l-selected-class="l-selected">
-                <block wx:for="{{classes}}" wx:key="index">
-                    <!-- 每个字母的索引列表 -->
-                    <view class="class-group-container">
-                        <!-- 列表首字母 -->
-                        <l-index-anchor class="l-index-anchor">{{item.firstLetter}}</l-index-anchor>
-                        <!-- 具体课程 -->
-                        <class-group f-class="class-group" classesByLetter="{{item.classesByLetter}}"></class-group>
-                    </view>
-                </block>
-            </l-index-list>
-        </view>
-
-        <!-- 搜索结果容器 -->
-        <view class="search-result-container" wx:else>
-            <l-index-list show-sidebar="" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}" class="index-list">
-                <view class="search-result">
-                    <!-- 搜索结果 -->
-                    <class-group f-class="valid-classes" classesByLetter="{{validClasses}}"></class-group>
-                    <!-- 无结果显示文字 -->
-                    <view wx:if="{{!flag && (validClasses.length == 0)}}" class="no-result">
-                        <text>未查找到关键词</text>
-                    </view>
-
-                </view>
-            </l-index-list>
-        </view>
-        
+    <!-- 搜索栏 -->
+    <view class="search-bar-container">
+        <l-search-bar l-class="l-search-bar" placeholder="请输入你要搜索的课名..." value="{{input}}" shape="circle"
+            bg-color="#ffffff" show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch"
+            bind:lincancel="onSearchCancel" bind:linclear="onSearchCancel" />
+        <!-- 分割线 -->
+        <view class="hr"></view>
     </view>
 
-    <!-- 底部导航栏 -->
-    <l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />
+    <!-- 课程列表容器 -->
+    <view class="all-classes-container" wx:if="{{flag}}">
+        <!-- 索引列表容器 -->
+        <l-index-list show-sidebar="{{false}}" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}"
+            class="index-list" l-sidebar-class="l-sidebar" l-selected-class="l-selected">
+            <block wx:for="{{classes}}" wx:key="index">
+                <!-- 每个字母的索引列表 -->
+                <view class="class-group-container">
+                    <!-- 列表首字母 -->
+                    <l-index-anchor class="l-index-anchor">{{item.firstLetter}}</l-index-anchor>
+                    <!-- 具体课程 -->
+                    <class-group f-class="class-group" classesByLetter="{{item.classesByLetter}}"></class-group>
+                </view>
+            </block>
+        </l-index-list>
+    </view>
 
-</l-capsule-bar>
+    <!-- 搜索结果容器 -->
+    <view class="search-result-container" wx:else>
+        <l-index-list show-sidebar="" scroll-top="{{scrollTop}}" sidebar-data="{{sidebarData}}" class="index-list">
+            <view class="search-result">
+                <!-- 搜索结果 -->
+                <class-group f-class="valid-classes" classesByLetter="{{validClasses}}"></class-group>
+                <!-- 无结果显示文字 -->
+                <view wx:if="{{!flag && (validClasses.length == 0)}}" class="no-result">
+                    <text>未查找到关键词</text>
+                </view>
+
+            </view>
+        </l-index-list>
+    </view>
+
+</view>
+
+<!-- 底部导航栏 -->
+<l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />

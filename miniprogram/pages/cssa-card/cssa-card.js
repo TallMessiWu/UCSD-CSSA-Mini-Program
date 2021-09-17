@@ -14,13 +14,13 @@ Page({
         list: [{
             pagePath: "/pages/class-chat/class-chat",
             text: "UCSD CSSA",
-            iconPath: "/images/icons/群黑.png",
-            selectedIconPath: "/images/icons/群红.png"
+            iconPath: "/images/icons/chat.png",
+            selectedIconPath: "/images/icons/chat-activated.png"
         }, {
             pagePath: "/pages/cssa-card/cssa-card",
             text: "CSSA卡",
-            iconPath: "/images/icons/卡黑.png",
-            selectedIconPath: "/images/icons/卡红.png"
+            iconPath: "/images/icons/card.png",
+            selectedIconPath: "/images/icons/card-activated.png"
         }],
         scrollTop: undefined,
         loggedin: false,
@@ -60,6 +60,15 @@ Page({
                     })
                 } else {
                     info = info.data[0]
+                    // 更新用户昵称与头像
+                    await userCollection.where({
+                        _openid: openid
+                    }).update({
+                        data: {
+                            nickName: userInfo.nickName,
+                            avatarUrl: userInfo.avatarUrl
+                        }
+                    })
                     // 用户已经购买
                     if (info.purchased) {
                         this.setData({
@@ -143,9 +152,9 @@ Page({
         }
     },
 
-    onHow(){
+    onHow() {
         wx.navigateTo({
-          url: '/pages/how-to-get-card/how-to-get-card'
+            url: '/pages/how-to-get-card/how-to-get-card'
         })
     },
 
@@ -159,10 +168,24 @@ Page({
         if (0 > count || count > 99999999) {
             throw "Illegal Arugment"
         }
-        const firstEight = Math.ceil(Math.random() * 100000000).toString()
+        // 随机生成一个8位数
+        const firstEight = Math.floor(Math.random() * (90000000) + 10000000).toString()
         const numZeros = 8 - count.toString().length
         const lastEight = `${"0".repeat(numZeros)}${count}`
-        return firstEight + lastEight
+        return parseInt(firstEight + lastEight)
+    },
+
+    copyCardNumber() {
+        console.log(this.data.cardNumber.replace(/\s/g, ""))
+        wx.setClipboardData({
+            data: `${parseInt(this.data.cardNumber.replace(/\s/g, ""))}`,
+            success: ()=>{
+                wx.showToast({
+                    title: "卡号已复制到剪切板",
+                    icon: "none"
+                })
+            }
+        })
     },
 
     /**
