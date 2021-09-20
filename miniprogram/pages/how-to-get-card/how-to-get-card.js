@@ -1,18 +1,27 @@
-// miniprogram/pages/how-to-get-card/how-to-get-card.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        imgSrcs: [app.globalData.gCardBaseUrl + "qrcode1.jpg", app.globalData.gCardBaseUrl + "qrcode2.jpg"],
+        useCodeSrc: app.globalData.gCardBaseUrl + "useCodeExample.png",
+        cardActivatedSrc: app.globalData.gCardBaseUrl + "cardActivated.png"
+    },
 
+    onImageTap(event) {
+        const src = event.target.dataset.src
+        wx.previewImage({
+            current: src,
+            urls: this.data.imgSrcs
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-    },
+    onLoad: function (options) {},
 
     /**
      * 生命周期函数--监听页面初次渲染完成

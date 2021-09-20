@@ -49,5 +49,8 @@
 
 </view>
 
+<!-- 占位 防止导航栏遮挡 -->
+<view class="stand-view"></view>
+
 <!-- 底部导航栏 -->
 <l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />

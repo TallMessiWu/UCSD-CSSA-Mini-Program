@@ -1,5 +1,30 @@
 <l-capsule-bar home-page="/pages/class-chat/class-chat" title="如何获取邀请码" bg-color="#C22A1E" capsule-color="white"
     title-color="white">
-
-这里会显示如何获取CSSA卡邀请码
 </l-capsule-bar>
+
+<view class="container">
+    <view class="step">
+        <text class="instruction">1、扫码添加以下两位学长中任意一个人的微信。</text>
+        <view class="qrcode">
+            <block wx:for="{{imgSrcs}}" wx:key="index">
+                <image src="{{item}}" mode="aspectFit" class="qrcode-image" bind:tap="onImageTap" data-src="{{item}}">
+                </image>
+            </block>
+        </view>
+    </view>
+
+    <view class="step">
+        <text class="instruction">2、私聊付款并收到个人专属邀请码。（仅能激活一次）</text>
+    </view>
+
+    <view class="step">
+        <text class="instruction">3、登录小程序，并输入邀请码激活电子CSSA卡。</text>
+        <image src="{{useCodeSrc}}" class="cardImage" mode="aspectFit"></image>
+    </view>
+
+    <view class="step">
+        <text class="instruction">4、点击确认后成功激活，以后只需要登录后就可以在众多商家中使用并享受优惠啦！</text>
+        <image src="{{cardActivatedSrc}}" class="cardImage" mode="aspectFit"></image>
+    </view>
+
+</view>

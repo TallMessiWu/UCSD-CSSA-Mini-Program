@@ -90,7 +90,12 @@
 .no-result {
     font-size: small;
     text-align: center;
-    color: 	#878787;
+    color: #878787;
     margin-top: 30rpx;
     margin-left: 10rpx;
+}
+
+.stand-view {
+    width: 100%;
+    height: 150rpx;
 }

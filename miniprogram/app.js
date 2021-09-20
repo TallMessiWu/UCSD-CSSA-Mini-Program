@@ -15,7 +15,9 @@ App({
     }
     this.globalData = {
       gChatBaseUrl: "cloud://ucsdcssa-5gxqhwwc12d1b1bf.7563-ucsdcssa-5gxqhwwc12d1b1bf-1305742996/图片/课友群/",
-      openid: -1
+      gCardBaseUrl: "cloud://ucsdcssa-5gxqhwwc12d1b1bf.7563-ucsdcssa-5gxqhwwc12d1b1bf-1305742996/图片/CSSA卡/",
+      openid: -1,
+      tmplId: "7qV7hnOBhRQbxp2NvPPXWAjaLzucqyu0uK03jOSiFkc"
     }
     this.getOpenid()
   },

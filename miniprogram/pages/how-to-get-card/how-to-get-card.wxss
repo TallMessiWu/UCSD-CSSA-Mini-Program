@@ -1,1 +1,42 @@
-/* miniprogram/pages/how-to-get-card/how-to-get-card.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 660rpx;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20rpx;
+    margin-top: 25rpx;
+}
+
+.instruction {
+    font-weight: bold;
+}
+
+.qrcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step:last-child {
+    margin-bottom: 25rpx;
+}
+
+.qrcode-image {
+    height: 700rpx;
+}
+
+.card-image {
+    border-radius: 15px;
+}

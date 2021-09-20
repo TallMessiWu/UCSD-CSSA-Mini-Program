@@ -37,10 +37,13 @@ Page({
     },
 
     onLogin() {
+        wx.showLoading({
+            title: "等待授权中",
+            mask: true
+        })
         wx.getUserProfile({
             desc: '用于获取CSSA卡持有状态',
             success: async (res) => {
-                wx.showLoading()
                 this.setData({
                     loggedin: true
                 })
@@ -55,7 +58,6 @@ Page({
                             nickName: userInfo.nickName,
                             avatarUrl: userInfo.avatarUrl,
                             purchased: false,
-                            cardNumber: ""
                         }
                     })
                 } else {
@@ -99,7 +101,27 @@ Page({
     },
 
     async onConfirm() {
-        wx.showLoading()
+        const tmplId = app.globalData.tmplId
+        wx.requestSubscribeMessage({
+            tmplIds: [tmplId],
+            success: (res) => {
+                if (res[tmplId] == "accept") {
+                    this.checkCode()
+                } else {
+                    wx.showToast({
+                        title: "订阅激活通知失败，无法完成激活",
+                        icon: "none"
+                    })
+                }
+            }
+        })
+    },
+
+    async checkCode() {
+        wx.showLoading({
+            title: "验证邀请码中",
+            mask: true
+        })
         let card_info = (await cardCollection.doc(cardId).get()).data
         let code = card_info.code
         let count = card_info.count
@@ -143,11 +165,23 @@ Page({
                     purchased: true
                 }
             })
+            // 推送订阅消息
+            wx.cloud.callFunction({
+                name: "subscribeMessage",
+                data: {
+                    cardNumber
+                }
+            })
             wx.hideLoading()
             // 更新页面显示
             this.setData({
                 purchased: true,
                 cardNumber: this.formatCardNumber(cardNumber)
+            })
+            wx.showToast({
+                title: "激活成功",
+                icon: "success",
+                duration: 1500
             })
         }
     },
@@ -179,7 +213,7 @@ Page({
         console.log(this.data.cardNumber.replace(/\s/g, ""))
         wx.setClipboardData({
             data: `${parseInt(this.data.cardNumber.replace(/\s/g, ""))}`,
-            success: ()=>{
+            success: () => {
                 wx.showToast({
                     title: "卡号已复制到剪切板",
                     icon: "none"

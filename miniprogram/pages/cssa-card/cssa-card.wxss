@@ -43,7 +43,7 @@
     width: 634rpx;
     background-color: rgba(128, 128, 128, 0.8);
     border-radius: 15px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -60,7 +60,7 @@
     margin-bottom: 10rpx;
 }
 
-.button{
+.button {
     margin-right: 5rpx;
 }
 
@@ -80,4 +80,9 @@
 
 .description {
     padding: 10rpx;
+}
+
+.stand-view {
+    width: 100%;
+    height: 150rpx;
 }
