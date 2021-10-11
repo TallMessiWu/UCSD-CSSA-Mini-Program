@@ -1,0 +1,131 @@
+.container {
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-search-bar {
+  width: 630rpx;
+  position: relative;
+  margin-top: 5rpx;
+  /* margin-left: -40rpx; */
+}
+
+.hr {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.swiper{
+  height: 340rpx;
+  width: 100%;
+}
+
+.img{
+  width:100%;
+  height: 100%;
+}
+
+.collection-container{
+  width: 700rpx;
+  height: 250rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.collection {
+  width: 175rpx;
+  height: 120rpx;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 给前四个元素加上下边框 */
+.collection:nth-child(-n+4)::before{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1rpx;
+  background-color: silver;
+}
+
+/* 给所有元素加上右边框 */
+.collection::after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 1rpx;
+  height: 100%;
+  background-color: silver;
+}
+
+/* 给第4和8个元素去除右边框 */
+.collection:nth-child(4n)::after{
+  visibility: hidden;
+}
+
+.collection-img{
+  margin-top: 10rpx;
+  width: 175rpx;
+  height: 75rpx;
+}
+
+.collection-text{
+  height: 25rpx;
+  font-size: smaller;
+  margin-bottom: 10rpx;
+}
+
+.starred-container {
+  width: 700rpx;
+  height: 200rpx;
+  margin-top: 30rpx;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10rpx;
+  position: relative;
+}
+
+.more{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.item-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.item233{
+  width: 300rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: black;
+}
+
+.item234{
+  width: 300rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background-color: blue;
+}

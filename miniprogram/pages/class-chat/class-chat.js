@@ -19,17 +19,25 @@ Page({
         validClasses: [],
         flag: true,
         input: "",
-        list: [{
-            pagePath: "/pages/class-chat/class-chat",
-            text: "UCSD CSSA",
-            iconPath: "/images/icons/chat.png",
-            selectedIconPath: "/images/icons/chat-activated.png"
-        }, {
-            pagePath: "/pages/cssa-card/cssa-card",
-            text: "CSSA卡",
-            iconPath: "/images/icons/card.png",
-            selectedIconPath: "/images/icons/card-activated.png"
-        }],
+        list: [
+            {
+              pagePath: "/pages/discovery/discovery",
+              text: "主页",
+              iconPath: "/images/icons/discovery.png",
+              selectedIconPath: "/images/icons/discovery-activated.png"
+            },
+            {
+              pagePath: "/pages/class-chat/class-chat",
+              text: "UCSD CSSA",
+              iconPath: "/images/icons/chat.png",
+              selectedIconPath: "/images/icons/chat-activated.png"
+            }, {
+              pagePath: "/pages/cssa-card/cssa-card",
+              text: "CSSA卡",
+              iconPath: "/images/icons/card.png",
+              selectedIconPath: "/images/icons/card-activated.png"
+            }
+          ],
     },
 
     // set classes and sidebarData and allClasses
@@ -38,7 +46,7 @@ Page({
         let classes = (await (await classes_collection.doc(classesId).get())).data
         this.setData({
             title: classes.title,
-            ["list[0].text"]: classes.title,
+            ["list[1].text"]: classes.title,
             classes: classes.classes,
             sidebarData: this.getSidebarData(classes.classes),
             _allClasses: this.getAllClasses(classes.classes)

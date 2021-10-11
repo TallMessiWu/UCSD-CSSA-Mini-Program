@@ -1,0 +1,62 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="CSSA卡" bg-color="#C22A1E"
+  capsule-color="white" title-color="white">
+</l-capsule-bar>
+
+<!-- 整体容器 -->
+<view class="container">
+
+  <!-- 搜索栏 -->
+  <view class="search-bar-container">
+    <l-search-bar l-class="l-search-bar" placeholder="请输入你要搜索的课名..." value="{{input}}" shape="circle" bg-color="#ffffff"
+      show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch" bind:lincancel="onSearchCancel"
+      bind:linclear="onSearchCancel" />
+    <!-- 分割线 -->
+    <view class="hr"></view>
+  </view>
+
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="1000">
+    <block wx:for="{{swiperImgUrls}}" wx:key="index">
+      <swiper-item indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="1000">
+        <image src="{{item.url}}" mode="widthFix" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 文章集合 -->
+  <view class="collection-container">
+    <block wx:for="{{collections}}" wx:key="index">
+      <view class="collection">
+        <image class="collection-img" src="{{item.src}}" mode="aspectFit"></image>
+        <view class="collection-text">
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="starred-container">
+    <view class="starred-header">
+      <view class="header-text">
+        <text>精选推荐</text>
+      </view>
+      <view class="more">
+        <text>更多</text>
+      </view>
+    </view>
+
+    <view class="item-container">
+      <view class="item233"></view>
+      <view class="item234"></view>
+    </view>
+  </view>
+
+
+</view>
+
+<!-- 占位 防止导航栏遮挡 -->
+<view class="stand-view"></view>
+
+<!-- 底部导航栏 -->
+<l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />
