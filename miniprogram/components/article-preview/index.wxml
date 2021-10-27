@@ -1,0 +1,2 @@
+<!--components/article-preview/index.wxml-->
+<text bind:tap="onTap" data-name="{{title}}">{{title}}</text>

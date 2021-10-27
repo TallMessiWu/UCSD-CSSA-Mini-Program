@@ -69,12 +69,18 @@ Page({
     ]
   },
 
-
   async setTabBar() {
     let classes_collection = wx.cloud.database().collection("class_chat")
     let classes = (await (await classes_collection.doc(classesId).get())).data
     this.setData({
       ["list[1].text"]: classes.title,
+    })
+  },
+
+  onCollectionTap(event){
+    let name = event.currentTarget.dataset.name
+    wx.navigateTo({
+      url: '/pages/collection/collection?name=' + name
     })
   },
 

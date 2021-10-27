@@ -1,0 +1,6 @@
+<l-capsule-bar home-page="/pages/welcome/welcome" title="CSSA卡" bg-color="#C22A1E"
+    capsule-color="white" title-color="white">
+</l-capsule-bar>
+<block wx:for="{{articleList}}">
+    <e-article-preview title="{{item}}" bind:hello="hello"></e-article-preview>
+</block>

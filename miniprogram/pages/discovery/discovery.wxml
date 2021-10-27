@@ -27,7 +27,7 @@
   <!-- 文章集合 -->
   <view class="collection-container">
     <block wx:for="{{collections}}" wx:key="index">
-      <view class="collection">
+      <view class="collection" bind:tap="onCollectionTap" data-name="{{item.text}}">
         <image class="collection-img" src="{{item.src}}" mode="aspectFit"></image>
         <view class="collection-text">
           <text>{{item.text}}</text>
@@ -47,8 +47,34 @@
     </view>
 
     <view class="item-container">
-      <view class="item233"></view>
-      <view class="item234"></view>
+      <view class="article">
+        <view class="aritical-img-container">
+          <image class="artical-img" src="/images/cssa-logo.jpg" mode="aspectFill"></image>
+        </view>
+        <view class="artical-text-container">
+          <view class="artical-title-container">
+            <text class="artical-title">标题1</text>
+          </view>
+          <view class="aritical-summary-container">
+            <text class="artical-summary">总结1</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="article">
+        <view class="aritical-img-container">
+          <image class="artical-img" src="/images/cssa-logo.jpg" mode="aspectFill"></image>
+        </view>
+        <view class="artical-text-container">
+          <view class="artical-title-container">
+            <text class="artical-title">标题2</text>
+          </view>
+          <view class="aritical-summary-container">
+            <text class="artical-summary">总结2</text>
+          </view>
+        </view>
+      </view>
+
     </view>
   </view>
 
