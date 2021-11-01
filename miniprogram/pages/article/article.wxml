@@ -1,2 +1,9 @@
-<!--miniprogram/pages/article/article.wxml-->
-<image></image>
+<!-- 顶部导航栏 -->
+<l-capsule-bar home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E" capsule-color="white"
+    title-color="white">
+</l-capsule-bar>
+<view class="container">
+    <block wx:for="{{images}}">
+        <image class="article-image" src="{{item}}" mode="widthFix"></image>
+    </block>
+</view>

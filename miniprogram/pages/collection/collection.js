@@ -6,12 +6,29 @@ Page({
      */
     data: {
         collectionName: "",
-        articleList: [1, 2, 3, 4, 5]
+        articles: []
     },
 
-    hello: function(event) {
-        console.log("hello")
-        console.log(event)
+    onTap(event) {
+        const content = event.currentTarget.dataset.article.content
+        wx.navigateTo({
+          url: `/pages/article/article?content=${content}&collectionName=${this.data.collectionName}`,
+        })
+    },
+
+    _loadArticles (collectionName, start) {
+        wx.cloud.callFunction({
+            name: "getArticles",
+            data: {
+                collectionName,
+                start
+            }
+        }).then((res)=>{
+            this.setData({
+                articles: this.data.articles.concat(res.result.data)
+            })
+            wx.stopPullDownRefresh()
+        })
     },
 
     /**
@@ -21,6 +38,7 @@ Page({
         this.setData({
             collectionName: options.name
         })
+        this._loadArticles(this.data.collectionName, 0)
     },
 
     /**
@@ -55,14 +73,17 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        this.setData({
+            articles: []
+        })
+        this._loadArticles(this.data.collectionName, 0)
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
+        this._loadArticles(this.data.collectionName, this.data.articles.length)
     },
 
     /**

@@ -1,2 +1,11 @@
-<!--components/article-preview/index.wxml-->
-<text bind:tap="onTap" data-name="{{title}}">{{title}}</text>
+<view class="container">
+    <view class="title-container">
+        <text class="title">{{title}}</text>
+    </view>
+    <view class="content-container">
+        <image class="thumbnail" src="{{image}}" />
+        <view class="summary-container">
+            <text class="summary">{{summary}}</text>
+        </view>
+    </view>
+</view>

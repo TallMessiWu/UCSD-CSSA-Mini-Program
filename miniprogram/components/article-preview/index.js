@@ -4,9 +4,9 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        title: String,
-        content: String,
-        picUrl: String
+        image: "",
+        title: "",
+        summary: ""
     },
 
     /**
@@ -20,13 +20,6 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        onTap(event){
-            this.triggerEvent(
-                "hello",
-                {
-                data: event.currentTarget.dataset.name
-            })
-            console.log("lol")
-        }
+
     }
 })

@@ -5,14 +5,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        title: "文章",
+        images: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            images: options.content.split(","),
+            title: options.collectionName + "-文章"
+        })
     },
 
     /**

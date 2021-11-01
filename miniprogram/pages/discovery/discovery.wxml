@@ -1,5 +1,5 @@
 <!-- 顶部导航栏 -->
-<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="CSSA卡" bg-color="#C22A1E"
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="UCSD CSSA" bg-color="#C22A1E"
   capsule-color="white" title-color="white">
 </l-capsule-bar>
 

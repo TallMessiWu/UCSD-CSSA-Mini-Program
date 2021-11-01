@@ -45,7 +45,7 @@
                 {
                     "name": "pages/collection/collection",
                     "pathName": "pages/collection/collection",
-                    "query": "name=\"社团活动\"",
+                    "query": "name=精彩活动",
                     "scene": null
                 },
                 {
