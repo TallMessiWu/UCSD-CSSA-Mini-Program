@@ -17,6 +17,10 @@ Page({
     },
 
     _loadArticles (collectionName, start) {
+        wx.showLoading({
+          title: '加载中',
+          mask: true
+        })
         wx.cloud.callFunction({
             name: "getArticles",
             data: {
@@ -28,6 +32,7 @@ Page({
                 articles: this.data.articles.concat(res.result.data)
             })
             wx.stopPullDownRefresh()
+            wx.hideLoading()
         })
     },
 

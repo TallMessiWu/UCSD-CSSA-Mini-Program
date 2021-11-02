@@ -1,12 +1,8 @@
 <view class="container">
-    <view class="title-container">
+    <image class="thumbnail" src="{{image}}" mode="aspectFill"></image>
+    <view class="text-container">
         <text class="title">{{title}}</text>
+        <text class="summary">{{summary}}</text>
     </view>
-    <view class="hr"></view>
-    <view class="content-container">
-        <image class="thumbnail" src="{{image}}" />
-        <view class="summary-container">
-            <text class="summary">{{summary}}</text>
-        </view>
-    </view>
+
 </view>
