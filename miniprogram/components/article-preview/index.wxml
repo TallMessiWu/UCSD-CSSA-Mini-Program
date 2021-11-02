@@ -2,6 +2,7 @@
     <view class="title-container">
         <text class="title">{{title}}</text>
     </view>
+    <view class="hr"></view>
     <view class="content-container">
         <image class="thumbnail" src="{{image}}" />
         <view class="summary-container">
