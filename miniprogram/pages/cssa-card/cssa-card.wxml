@@ -44,13 +44,7 @@
         <l-collapse type="accordion" expand-item-id="{{['0']}}">
             <l-collapse-item title="CSSA卡介绍" l-class="l-collapse-item" item-id="0" l-title-class="l-title">
                 <view class="description">
-                    <text class="description-text" user-select="{{true}}">- 美西南地区学联包括UCSD、UCLA、UCI、UCSB等众多学校联合推出的商家打折卡。
-
-                        - 适用于美西南地区所有CSSA合作商家。
-
-                        - 覆盖餐饮，旅游，美容美发等各个行业，以满足同学们的日常生活需求。
-
-                        - 仅需$10即可购买！！！终生享受美西南地区近百家店铺优惠。</text>
+                    <rich-text nodes="{{card_description}}"></rich-text>
                 </view>
             </l-collapse-item>
         </l-collapse>

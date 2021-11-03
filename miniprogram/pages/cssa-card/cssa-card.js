@@ -1,9 +1,11 @@
 const app = getApp()
 const openid = app.globalData.openid
 const db = wx.cloud.database()
-let classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+const classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+const cardDesciptionId = "fa24ce1a618254d803ecbabc034ef293"
 const userCollection = db.collection("user")
 const cardCollection = db.collection("card_info")
+const descCollection = db.collection("card_description")
 const cardId = "cd045e756142fe8d0e6e827f32aeb3cb"
 let input = ""
 Page({
@@ -11,29 +13,30 @@ Page({
      * 页面的初始数据
      */
     data: {
-        list: [
-            {
-              pagePath: "/pages/discovery/discovery",
-              text: "主页",
-              iconPath: "/images/icons/discovery.png",
-              selectedIconPath: "/images/icons/discovery-activated.png"
+        list: [{
+                pagePath: "/pages/discovery/discovery",
+                text: "主页",
+                iconPath: "/images/icons/discovery.png",
+                selectedIconPath: "/images/icons/discovery-activated.png"
             },
             {
-              pagePath: "/pages/class-chat/class-chat",
-              text: "UCSD CSSA",
-              iconPath: "/images/icons/chat.png",
-              selectedIconPath: "/images/icons/chat-activated.png"
+                pagePath: "/pages/class-chat/class-chat",
+                text: "UCSD CSSA",
+                iconPath: "/images/icons/chat.png",
+                selectedIconPath: "/images/icons/chat-activated.png"
             }, {
-              pagePath: "/pages/cssa-card/cssa-card",
-              text: "CSSA卡",
-              iconPath: "/images/icons/card.png",
-              selectedIconPath: "/images/icons/card-activated.png"
+                pagePath: "/pages/cssa-card/cssa-card",
+                text: "CSSA卡",
+                iconPath: "/images/icons/card.png",
+                selectedIconPath: "/images/icons/card-activated.png"
             }
-          ],
+        ],
         scrollTop: undefined,
         loggedin: false,
         purchased: false,
         cardNumber: "xxxx xxxx xxxx xxxx",
+        card_description: "",
+        signed_merchants: ""
     },
 
     async setTabBar() {
@@ -230,11 +233,25 @@ Page({
         })
     },
 
+    loadDescription() {
+        descCollection.where({
+            _id: cardDesciptionId
+        }).get().then((res) => {
+            const card_description = res.data[0].card_description
+            const signed_merchants = res.data[0].signed_merchants
+            this.setData({
+                card_description,
+                signed_merchants
+            })
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         this.setTabBar()
+        this.loadDescription()
     },
 
     /**

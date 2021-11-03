@@ -70,16 +70,18 @@
     width: 634rpx;
     border-radius: 15px;
     margin-top: 30rpx;
+    padding-right: 10rpx;
 }
 
 .l-title {
-    margin-top: 10rpx;
+    margin-top: 5rpx;
     margin-left: 10rpx;
     color: #C22A1E;
 }
 
 .description {
-    padding: 10rpx;
+    padding-bottom: 10rpx;
+    padding-right: 30rpx;
 }
 
 .stand-view {

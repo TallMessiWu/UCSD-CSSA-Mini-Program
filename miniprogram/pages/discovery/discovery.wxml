@@ -18,8 +18,8 @@
   <!-- 轮播图 -->
   <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="1000">
     <block wx:for="{{swiperImgUrls}}" wx:key="index">
-      <swiper-item indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="1000">
-        <image src="{{item.url}}" mode="widthFix" class="img"></image>
+      <swiper-item>
+        <image src="{{item.url}}" mode="aspectFill" class="img"></image>
       </swiper-item>
     </block>
   </swiper>
@@ -36,6 +36,7 @@
     </block>
   </view>
 
+  <!-- 精选推荐 -->
   <view class="starred-container">
     <view class="starred-header">
       <view class="header-text">
