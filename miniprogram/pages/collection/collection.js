@@ -12,14 +12,14 @@ Page({
     onTap(event) {
         const content = event.currentTarget.dataset.article.content
         wx.navigateTo({
-          url: `/pages/article/article?content=${content}&collectionName=${this.data.collectionName}`,
+            url: `/pages/article/article?content=${content}&collectionName=${this.data.collectionName}`,
         })
     },
 
-    _loadArticles (collectionName, start) {
+    _loadArticles(collectionName, start) {
         wx.showLoading({
-          title: '加载中',
-          mask: true
+            title: '加载中',
+            mask: true
         })
         wx.cloud.callFunction({
             name: "getArticles",
@@ -27,7 +27,7 @@ Page({
                 collectionName,
                 start
             }
-        }).then((res)=>{
+        }).then((res) => {
             this.setData({
                 articles: this.data.articles.concat(res.result.data)
             })

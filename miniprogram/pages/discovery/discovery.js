@@ -1,4 +1,5 @@
-let classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+const classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+
 
 Page({
 
@@ -22,16 +23,6 @@ Page({
         text: "CSSA卡",
         iconPath: "/images/icons/card.png",
         selectedIconPath: "/images/icons/card-activated.png"
-      }
-    ],
-    swiperImgUrls: [{
-        url: 'http://p1.music.126.net/oeH9rlBAj3UNkhOmfog8Hw==/109951164169407335.jpg',
-      },
-      {
-        url: 'http://p1.music.126.net/xhWAaHI-SIYP8ZMzL9NOqg==/109951164167032995.jpg',
-      },
-      {
-        url: 'http://p1.music.126.net/Yo-FjrJTQ9clkDkuUCTtUg==/109951164169441928.jpg',
       }
     ],
     collections: [{
@@ -66,7 +57,8 @@ Page({
         text: "竞技比赛",
         src: "/images/icons/discovery/fenlei-dota.png"
       }
-    ]
+    ],
+    headlines: []
   },
 
   async setTabBar() {
@@ -77,10 +69,27 @@ Page({
     })
   },
 
-  onCollectionTap(event){
+  onCollectionTap(event) {
     let name = event.currentTarget.dataset.name
     wx.navigateTo({
       url: '/pages/collection/collection?name=' + name
+    })
+  },
+
+  onHeadlineTap(event) {
+    const content = event.currentTarget.dataset.article.articleInfo[0].content
+    wx.navigateTo({
+      url: `/pages/article/article?content=${content}&collectionName=头条`,
+    })
+  },
+
+  loadHeadlines() {
+    wx.cloud.callFunction({
+      name: "getHeadlines"
+    }).then((res) => {
+      this.setData({
+        headlines: res.result.list
+      })
     })
   },
 
@@ -89,6 +98,7 @@ Page({
    */
   onLoad: function (options) {
     this.setTabBar()
+    this.loadHeadlines()
   },
 
   /**

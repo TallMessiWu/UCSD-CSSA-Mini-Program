@@ -3,7 +3,7 @@
 </l-capsule-bar>
 
 <view class="container">
-    <block wx:for="{{articles}}">
+    <block wx:for="{{articles}}" wx:key="index">
         <e-article-preview image="{{item.thumbnail}}" title="{{item.title}}" summary="{{item.summary}}" bind:tap="onTap" data-article="{{item}}"></e-article-preview>
     </block>
 </view>

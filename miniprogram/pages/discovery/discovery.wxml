@@ -8,18 +8,22 @@
 
   <!-- 搜索栏 -->
   <view class="search-bar-container">
-    <l-search-bar l-class="l-search-bar" placeholder="请输入你要搜索的课名..." value="{{input}}" shape="circle" bg-color="#ffffff"
-      show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch" bind:lincancel="onSearchCancel"
-      bind:linclear="onSearchCancel" />
+    <l-search-bar l-class="l-search-bar" placeholder="请输入你要搜索的文章标题..." value="{{input}}" shape="circle"
+      bg-color="#ffffff" show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch"
+      bind:lincancel="onSearchCancel" bind:linclear="onSearchCancel" />
     <!-- 分割线 -->
     <view class="hr"></view>
   </view>
 
   <!-- 轮播图 -->
-  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="1000">
-    <block wx:for="{{swiperImgUrls}}" wx:key="index">
-      <swiper-item>
-        <image src="{{item.url}}" mode="aspectFill" class="img"></image>
+  <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="white" indicator-color="gray"
+    autoplay="{{true}}" interval="2000" duration="1000" circular="{{true}}">
+    <block wx:for="{{headlines}}" wx:key="index">
+      <swiper-item bindtap="onHeadlineTap" data-article="{{item}}">
+        <view class="headlines">
+          <image src="{{item.poster}}" mode="aspectFill" class="img"></image>
+          <text class="title">{{item.articleInfo[0].title}}</text>
+        </view>
       </swiper-item>
     </block>
   </swiper>
@@ -43,11 +47,12 @@
         <text>精选推荐</text>
       </view>
       <view class="more">
-        <text>更多</text>
+        <text>更多></text>
       </view>
     </view>
 
     <view class="item-container">
+  
       <view class="article">
         <view class="aritical-img-container">
           <image class="artical-img" src="/images/cssa-logo.jpg" mode="aspectFill"></image>
