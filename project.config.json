@@ -20,9 +20,9 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -36,7 +36,8 @@
         "minifyWXSS": true,
         "disableUseStrict": false,
         "showES6CompileOption": false,
-        "useCompilerPlugins": false
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
     "appid": "wx37643ed83b67a2c4",
     "projectname": "CSSA%E5%B0%8F%E7%A8%8B%E5%BA%8F",
