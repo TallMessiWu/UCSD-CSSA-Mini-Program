@@ -3,7 +3,7 @@
     title-color="white">
 </l-capsule-bar>
 <view class="container">
-    <block wx:for="{{images}}">
+    <block wx:for="{{images}}" wx:key="index">
         <image class="article-image" src="{{item}}" mode="widthFix"></image>
     </block>
 </view>

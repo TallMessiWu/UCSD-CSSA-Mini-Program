@@ -1,5 +1,7 @@
 {
   "usingComponents": {
+    "e-starred-article-preview": "/components/starred-article-preview/index",
     "e-article-preview": "/components/article-preview/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

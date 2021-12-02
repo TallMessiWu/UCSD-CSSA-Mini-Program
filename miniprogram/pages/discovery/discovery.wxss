@@ -123,7 +123,7 @@
   border-radius: 15px;
   padding: 10rpx;
   position: relative;
-  padding-bottom: 20rpx;
+  padding-bottom: 30rpx;
 }
 
 .starred-header {
@@ -139,6 +139,7 @@
   position: absolute;
   right: 40rpx;
   top: 20rpx;
+  color: #1552cb;
 }
 
 .item-container {
@@ -146,34 +147,19 @@
   flex-direction: row;
 }
 
-.article {
-  width: 300rpx;
-  height: 200rpx;
-  margin-top: 10rpx;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  background-color: #fafafa;
-  padding: 5rpx;
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700rpx;
+  background-color: white;
+  color: gray;
   border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10rpx;
 }
 
-.artical-img {
-  height: 100rpx;
+.stand-view {
   width: 100%;
-}
-
-.artical-title-container {
-  width: 100%;
-  height: 65rpx;
-}
-
-.artical-title {
-  font-size: large;
-  font-weight: bold;
-}
-
-.aritical-summary-container {
-  width: 100%;
-  height: 35rpx;
-  font-size: smaller;
+  height: 150rpx;
 }

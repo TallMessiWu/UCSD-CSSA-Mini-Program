@@ -1,1 +1,40 @@
-/* components/starred-article-preview/index.wxss */
+.container {
+    background-color: white;
+    border-radius: 15px;
+    width: 300rpx;
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    /* box-shadow: 8rpx 8rpx 8rpx gray; */
+}
+
+.thumbnail{
+    width: 100%;
+    height: 128rpx;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.text-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx 20rpx 30rpx;
+}
+
+.title {
+    display: block;
+    font-size: 28rpx;
+    margin-bottom: 10rpx;
+}
+
+.summary {
+    display: block;
+    font-weight: 300;
+    font-size: 28rpx;
+}

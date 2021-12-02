@@ -6,4 +6,7 @@
     <block wx:for="{{articles}}" wx:key="index">
         <e-article-preview image="{{item.thumbnail}}" title="{{item.title}}" summary="{{item.summary}}" bind:tap="onTap" data-article="{{item}}"></e-article-preview>
     </block>
+    <view class="not-found" wx:if="{{articles.length == 0}}">
+        <text>暂无</text>
+    </view>
 </view>
