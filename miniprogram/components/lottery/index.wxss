@@ -1,0 +1,45 @@
+.container {
+  margin-top: 30rpx;
+  width: 700rpx;
+  height: 250rpx;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.poster {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.event-container {
+  width: 420rpx;
+  height: 200rpx;
+  background-color: palevioletred;
+}
+
+.title-container {
+  background-color: pink;
+  width: 420rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rpx;
+  box-sizing: border-box;
+}
+
+.title{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.info-container {
+  background-color: aqua;
+  width: 420rpx;
+  height: 100rpx;
+}

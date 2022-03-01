@@ -1,60 +1,66 @@
 {
-    "setting": {},
-    "condition": {
-        "plugin": {
-            "list": []
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/class-chat/class-chat",
+          "pathName": "pages/class-chat/class-chat",
+          "query": "",
+          "scene": null
         },
-        "game": {
-            "list": []
+        {
+          "name": "pages/cssa-card/cssa-card",
+          "pathName": "pages/cssa-card/cssa-card",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "name": "pages/welcome/welcome",
+          "pathName": "pages/welcome/welcome",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "pages/class-chat/class-chat",
-                    "pathName": "pages/class-chat/class-chat",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/cssa-card/cssa-card",
-                    "pathName": "pages/cssa-card/cssa-card",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/welcome/welcome",
-                    "pathName": "pages/welcome/welcome",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/how-to-get-card/how-to-get-card",
-                    "pathName": "pages/how-to-get-card/how-to-get-card",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/discovery/discovery",
-                    "pathName": "pages/discovery/discovery",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/collection/collection",
-                    "pathName": "pages/collection/collection",
-                    "query": "name=精彩活动",
-                    "scene": null
-                },
-                {
-                    "name": "pages/article/article",
-                    "pathName": "pages/article/article",
-                    "query": "name=%E7%B2%BE%E5%BD%A9%E6%B4%BB%E5%8A%A8",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "pages/how-to-get-card/how-to-get-card",
+          "pathName": "pages/how-to-get-card/how-to-get-card",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/discovery/discovery",
+          "pathName": "pages/discovery/discovery",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/collection/collection",
+          "pathName": "pages/collection/collection",
+          "query": "name=精彩活动",
+          "scene": null
+        },
+        {
+          "name": "pages/article/article",
+          "pathName": "pages/article/article",
+          "query": "name=%E7%B2%BE%E5%BD%A9%E6%B4%BB%E5%8A%A8",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/activity/activity",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }

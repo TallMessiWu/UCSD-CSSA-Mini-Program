@@ -19,25 +19,30 @@ Page({
         validClasses: [],
         flag: true,
         input: "",
-        list: [
-            {
-              pagePath: "/pages/discovery/discovery",
-              text: "主页",
-              iconPath: "/images/icons/discovery.png",
-              selectedIconPath: "/images/icons/discovery-activated.png"
+        list: [{
+                pagePath: "/pages/discovery/discovery",
+                text: "主页",
+                iconPath: "/images/icons/discovery.png",
+                selectedIconPath: "/images/icons/discovery-activated.png"
             },
             {
-              pagePath: "/pages/class-chat/class-chat",
-              text: "UCSD CSSA",
-              iconPath: "/images/icons/chat.png",
-              selectedIconPath: "/images/icons/chat-activated.png"
+                pagePath: "/pages/class-chat/class-chat",
+                text: "UCSD CSSA",
+                iconPath: "/images/icons/chat.png",
+                selectedIconPath: "/images/icons/chat-activated.png"
             }, {
-              pagePath: "/pages/cssa-card/cssa-card",
-              text: "CSSA卡",
-              iconPath: "/images/icons/card.png",
-              selectedIconPath: "/images/icons/card-activated.png"
+                pagePath: "/pages/cssa-card/cssa-card",
+                text: "CSSA卡",
+                iconPath: "/images/icons/card.png",
+                selectedIconPath: "/images/icons/card-activated.png"
+            },
+            {
+                pagePath: "/pages/activity/activity",
+                text: "活动抽奖",
+                iconPath: "/images/icons/activity.png",
+                selectedIconPath: "/images/icons/activity-activated.png"
             }
-          ],
+        ],
     },
 
     // set classes and sidebarData and allClasses

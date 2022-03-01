@@ -1,0 +1,15 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E"
+    capsule-color="white" title-color="white">
+</l-capsule-bar>
+
+<!-- 整体容器 -->
+<view class="container">
+    <e-lottery></e-lottery>
+</view>
+
+<!-- 占位 防止导航栏遮挡 -->
+<view class="stand-view"></view>
+
+<!-- 底部导航栏 -->
+<l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />

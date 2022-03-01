@@ -1,0 +1,15 @@
+<view class="container">
+  <image class="poster" src="/images/cssa-logo.jpg" mode="aspectFill"></image>
+  <view class="event-container">
+    <view class="title-container">
+      <text class="title">CSSA线下新生大礼包抽奖</text>
+    </view>
+    <view class="info-container">
+      <view class="timer-container">
+        <view class="deadline-container"></view>
+        <view class="countdown"></view>
+      </view>
+      <view class="button-container"></view>
+    </view>
+  </view>
+</view>
