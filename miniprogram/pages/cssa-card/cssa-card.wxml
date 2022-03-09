@@ -47,11 +47,11 @@
                     <rich-text nodes="{{card_description}}"></rich-text>
                 </view>
             </l-collapse-item>
-            <!-- <l-collapse-item title="已签约商家" l-class="l-collapse-item" item-id="1" l-title-class="l-title">
+            <l-collapse-item title="已签约商家" l-class="l-collapse-item" item-id="1" l-title-class="l-title">
                 <view class="description">
-                    <rich-text nodes="{{signed_merchants}}"></rich-text>
+                    <image src="{{signed_merchants}}" mode="aspectFit" bind:tap="onImageTap"></image>
                 </view>
-            </l-collapse-item> -->
+            </l-collapse-item>
         </l-collapse>
     </view>
 

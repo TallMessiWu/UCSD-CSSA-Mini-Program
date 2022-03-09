@@ -209,6 +209,12 @@ Page({
         })
     },
 
+    onImageTap(){
+        wx.previewImage({
+          urls: [this.data.signed_merchants]
+        })
+    },
+
     /**
      * 卡号的前八位是随机数字，后八位是补零后的第几张卡的数字
      * 例如：第一张购买的人的卡的卡号为：8个随机数字 + 00000001
