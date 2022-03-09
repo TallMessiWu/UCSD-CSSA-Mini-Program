@@ -1,6 +1,5 @@
 <!-- 顶部导航栏 -->
-<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="CSSA卡" bg-color="#C22A1E"
-    capsule-color="white" title-color="white">
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="CSSA卡" bg-color="#C22A1E" capsule-color="white" title-color="white">
 </l-capsule-bar>
 
 <!-- 总体容器 -->
@@ -29,8 +28,7 @@
         <text class="number">{{cardNumber}}</text>
         <view class="login-mask">
             <view class="form">
-                <l-input label="邀请码" placeholder="请输入邀请码" width="500" showRow="{{false}}" l-class="input"
-                    bind:lininput="onInput"></l-input>
+                <l-input label="邀请码" placeholder="请输入邀请码" width="500" showRow="{{false}}" l-class="input" bind:lininput="onInput"></l-input>
                 <l-button width="100" shape="semicircle" bg-color="#FF3030" bind:tap="onConfirm" l-class="button">确认
                 </l-button>
             </view>
@@ -49,7 +47,7 @@
             </l-collapse-item>
             <l-collapse-item title="已签约商家" l-class="l-collapse-item" item-id="1" l-title-class="l-title">
                 <view class="description">
-                    <image src="{{signed_merchants}}" mode="aspectFit" bind:tap="onImageTap"></image>
+                    <image src="{{signed_merchants}}" mode="aspectFit" bind:tap="onImageTap" bind:longpress="onImageTap"></image>
                 </view>
             </l-collapse-item>
         </l-collapse>

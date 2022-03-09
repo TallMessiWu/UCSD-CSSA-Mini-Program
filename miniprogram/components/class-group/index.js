@@ -52,14 +52,16 @@ Component({
 
     },
     lifetimes: {
-        async attached(){
+        async attached() {
             let classesByLetter = this.properties.classesByLetter
             let srcs = {}
             for (let i = 0; i < classesByLetter.length; i++) {
                 // 后面的random用于保证图片不是之前缓存过的过期二维码
-                srcs[classesByLetter[i]] = (await wx.cloud.getTempFileURL({fileList:[
-                    this.data.url + classesByLetter[i] + this.data.imgSuffix
-                ]})).fileList[0].tempFileURL + "?v=" + Math.random()
+                srcs[classesByLetter[i]] = (await wx.cloud.getTempFileURL({
+                    fileList: [
+                        this.data.url + classesByLetter[i] + this.data.imgSuffix
+                    ]
+                })).fileList[0].tempFileURL + "?v=" + Math.random()
             }
             this.setData({
                 srcs

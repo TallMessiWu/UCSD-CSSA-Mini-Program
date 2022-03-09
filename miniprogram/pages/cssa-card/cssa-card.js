@@ -209,9 +209,9 @@ Page({
         })
     },
 
-    onImageTap(){
+    onImageTap() {
         wx.previewImage({
-          urls: [this.data.signed_merchants]
+            urls: [this.data.signed_merchants]
         })
     },
 
