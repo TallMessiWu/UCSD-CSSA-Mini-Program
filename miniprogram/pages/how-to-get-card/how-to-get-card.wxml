@@ -4,7 +4,7 @@
 
 <view class="container">
     <view class="step">
-        <text class="instruction">1、扫码添加以下两位学长中任意一个人的微信。</text>
+        <text class="instruction">1、扫码添加以下学长中任意一个人的微信。</text>
         <view class="qrcode">
             <block wx:for="{{imgSrcs}}" wx:key="index">
                 <image src="{{item}}" mode="aspectFit" class="qrcode-image" bind:tap="onImageTap" data-src="{{item}}">

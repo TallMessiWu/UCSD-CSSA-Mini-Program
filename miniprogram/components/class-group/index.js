@@ -57,11 +57,17 @@ Component({
             let srcs = {}
             for (let i = 0; i < classesByLetter.length; i++) {
                 // 后面的random用于保证图片不是之前缓存过的过期二维码
-                srcs[classesByLetter[i]] = (await wx.cloud.getTempFileURL({
+                let url = (await wx.cloud.getTempFileURL({
                     fileList: [
                         this.data.url + classesByLetter[i] + this.data.imgSuffix
                     ]
-                })).fileList[0].tempFileURL + "?v=" + Math.random()
+                })).fileList[0].tempFileURL
+                // 用来查看哪些课没有图片
+                // 如果有n个课没有图片，除了Cannot read property 'height' of null这个报错以外，还会有n+2个报错，那个额外的两个报错在所有图片都到位后会自动消失
+                if (url == "") {
+                    console.log(classesByLetter[i])
+                }
+                srcs[classesByLetter[i]] = url + "?v=" + Math.random()
             }
             this.setData({
                 srcs
