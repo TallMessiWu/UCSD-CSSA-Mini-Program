@@ -1,0 +1,70 @@
+.container {
+  background-color: white;
+  border-radius: 100rpx;
+  margin-top: 30rpx;
+  width: 700rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.poster {
+  border-radius: 100rpx;
+  position:relative;
+  top:0rpx;
+  width: 700rpx;
+  height: 270rpx;
+}
+
+.event-container {
+  position: relative;
+  left: 20rpx;
+  width: 700rpx;
+  height: 230rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+  width: 700rpx;
+  height: 70rpx;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding: 5rpx;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.title{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.countdown-container {
+  position: relative;
+  top: 10rpx;
+  text-align: left;
+}
+
+.box-container {
+  position:relative;
+  top:0rpx;
+  display: flex;
+  flex-direction: column;
+  height: 160rpx;
+  width: 700rpx;
+  border-radius: 30rpx;
+}
+
+.button-container {
+  background-color: rgb(197, 33, 33);
+  left: 170rpx;
+  bottom: 20rpx;
+  width: 0rpx ;
+  height: 100rpx; 
+  text-align: center;
+}

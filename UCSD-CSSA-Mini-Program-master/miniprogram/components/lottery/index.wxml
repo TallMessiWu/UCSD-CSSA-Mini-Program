@@ -1,0 +1,19 @@
+<view class="container">
+  <view>
+    <image class="poster" src="{{image}}" mode="aspectFill"></image>
+  </view>
+  <view class="event-container">
+    <view class="title-container">
+        <text class="title">{{title}}</text>
+    </view>
+    <view class="box-container">
+      <view class="countdown-container">
+        <text style="display: block;font-size:30rpx;">距离开奖仅剩   {{clock}}
+        </text>
+      </view>
+      <button class="button-container" style="width:210rpx;height:90rpx;font-size:10px;color:white">
+          报名/查看结果
+      </button>
+    </view>
+  </view>
+</view>
