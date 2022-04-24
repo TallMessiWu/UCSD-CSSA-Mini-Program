@@ -1,0 +1,9 @@
+
+  <view class="page-body-info ">
+    <!-- <open-data type='userAvatarUrl' class="userinfo"></open-data> -->
+    <image src= "{{image}}" class="userinfo"></image>
+    <!-- <open-data type="userNickName"  class= "userText"></open-data>  -->
+    <text class= "userText">{{userText}}</text>
+  </view>
+
+  

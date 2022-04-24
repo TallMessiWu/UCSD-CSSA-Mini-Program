@@ -1,0 +1,146 @@
+/* pages/lottery_results/lottery_results.wxss */
+
+.img{
+  background-color: rgb(183, 142, 223);
+  width: 700rpx;
+  height: 250rpx;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.header{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.result-info {
+  background-color: #ffffff;
+  width: 700rpx;
+  border-radius: 15px;
+  margin-top: 30rpx;
+  padding-right: 10rpx;
+  margin: 15rpx;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.l-title {
+  margin-top: 5rpx;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  color: #C22A1E;
+}
+
+.description {
+  padding-bottom: 10rpx;
+  padding-right: 30rpx;
+}
+
+.result{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+
+.results_container{
+  background-color: white;
+  width: 700rpx;
+  height: 1960rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.prize_title{
+  background-color: rgb(236, 236, 236);
+  width: 670rpx;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.first_prize{
+  background-color: rgb(255, 255, 255);
+  width: 673rpx;
+  height: 270rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.touxiang{
+  flex-direction: column;
+}
+
+.touxiang2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.second_prize{
+  background-color: rgb(255, 255, 255);
+  width: 673rpx;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20rpx;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.third_prize{
+  background-color: rgb(255, 255, 255);
+  width: 673rpx;
+  height: auto;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.userInfo{
+  margin-left: 30rpx;
+}
+
+.crown{
+  height: 80rpx;
+  width: 105rpx;
+  margin: 0 auto;  /* 头像居中*/
+}
+
+.page-body-info {
+  text-align: center; 
+}
+.userinfo{
+    width: 90rpx;
+    height: 90rpx;
+    margin: 0 auto;  /* 头像居中*/
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;  /* 内容将被剪裁以适合填充框 */
+}
+.userText{
+  font-size: 25rpx;
+}

@@ -1,0 +1,16 @@
+.page-body-info {
+  text-align: center; 
+  margin: 20rpx;
+}
+.userinfo{
+    width: 90rpx;
+    height: 90rpx;
+    margin: 0 auto;  /* 头像居中*/
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;  /* 内容将被剪裁以适合填充框 */
+}
+.userText{
+  font-size: 25rpx;
+}
+ 
