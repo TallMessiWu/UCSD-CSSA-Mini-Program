@@ -88,7 +88,7 @@ Page({
       success: async (res) => {
         const userInfo = res.userInfo
         userInfo.openid = openid
-        const info = (await lotteryCollection.doc(_id).get()).data
+        const info = (await lotteryCollection.doc(_id).get()).data        
         if (info.users == null) {
           await lotteryCollection.doc(_id).update({
             data: {
@@ -102,6 +102,7 @@ Page({
           wx.hideLoading()
           return
         }
+        console.log(info)
         const exists = (await lotteryCollection.where({
           _id,
           users: _.elemMatch({

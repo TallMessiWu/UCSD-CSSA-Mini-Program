@@ -84,7 +84,12 @@
     padding-right: 30rpx;
 }
 
+.merchants {
+    width: 600rpx;
+    height: 800rpx;
+}
+
 .stand-view {
     width: 100%;
-    height: 150rpx;
+    height: 200rpx;
 }

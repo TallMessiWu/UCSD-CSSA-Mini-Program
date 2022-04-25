@@ -58,7 +58,8 @@
           "name": "",
           "pathName": "pages/activity/activity",
           "query": "",
-          "scene": null
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }

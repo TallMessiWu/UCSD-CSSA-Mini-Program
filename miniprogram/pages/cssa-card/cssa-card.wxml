@@ -47,7 +47,7 @@
             </l-collapse-item>
             <l-collapse-item title="已签约商家" l-class="l-collapse-item" item-id="1" l-title-class="l-title">
                 <view class="description">
-                    <image src="{{signed_merchants}}" mode="aspectFit" bind:tap="onImageTap" bind:longpress="onImageTap"></image>
+                    <image src="{{signed_merchants}}" class="merchants" mode="aspectFit" bind:tap="onImageTap" bind:longpress="onImageTap"></image>
                 </view>
             </l-collapse-item>
         </l-collapse>

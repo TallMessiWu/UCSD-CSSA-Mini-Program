@@ -5,7 +5,6 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imgSrcs: [app.globalData.gCardBaseUrl + "qrcode1.jpg", app.globalData.gCardBaseUrl + "qrcode2.jpg"],
         useCodeSrc: app.globalData.gCardBaseUrl + "useCodeExample.png",
         cardActivatedSrc: app.globalData.gCardBaseUrl + "cardActivated.png"
     },
@@ -21,7 +20,17 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {},
+    onLoad: function (options) {
+        let imgSrcs = []
+        if (Math.random() < 0.5) {
+            imgSrcs = [app.globalData.gCardBaseUrl + "qrcode1.jpg", app.globalData.gCardBaseUrl + "qrcode2.jpg"]
+        } else {
+            imgSrcs = [app.globalData.gCardBaseUrl + "qrcode2.jpg", app.globalData.gCardBaseUrl + "qrcode1.jpg"]
+        }
+        this.setData({
+            imgSrcs
+        })
+    },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
