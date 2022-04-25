@@ -1,7 +1,12 @@
 // pages/activity/activity.js
 import deviceUtil from "../../miniprogram_npm/lin-ui/utils/device-util"
 
-let classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+const app = getApp()
+const classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+const db = wx.cloud.database()
+const lotteryCollection = db.collection("lottery")
+const _ = db.command
+
 
 Page({
 
@@ -35,7 +40,8 @@ Page({
         iconPath: "/images/icons/activity.png",
         selectedIconPath: "/images/icons/activity-activated.png"
       }
-    ]
+    ],
+    events: []
   },
 
   async setTabBar() {
@@ -51,6 +57,84 @@ Page({
    */
   onLoad: function (options) {
     this.setTabBar()
+    this._getList(0, 10)
+  },
+
+  async _getList(start, count) {
+    wx.cloud.callFunction({
+      name: "getLottery",
+      data: {
+        start,
+        count,
+        $url: "list"
+      }
+    }).then((res) => {
+      console.log(res.result)
+      this.setData({
+        events: this.data.events.concat(res.result)
+      })
+    })
+  },
+
+  async register(event) {
+    const openid = app.globalData.openid
+    const _id = event.currentTarget.dataset._id
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    wx.getUserProfile({
+      desc: '用于提供获奖信息',
+      success: async (res) => {
+        const userInfo = res.userInfo
+        userInfo.openid = openid
+        const info = (await lotteryCollection.doc(_id).get()).data
+        if (info.users == null) {
+          await lotteryCollection.doc(_id).update({
+            data: {
+              users: [userInfo]
+            }
+          })
+          wx.showToast({
+            title: "报名成功！",
+            icon: "success"
+          })
+          wx.hideLoading()
+          return
+        }
+        const exists = (await lotteryCollection.where({
+          _id,
+          users: _.elemMatch({
+            openid
+          })
+        }).get()).data.length == 1
+        if (!exists) {
+          await lotteryCollection.doc(_id).update({
+            data: {
+              users: info.users.concat([userInfo])
+            }
+          })
+          wx.hideLoading()
+          wx.showToast({
+            title: "报名成功！",
+            icon: "success"
+          })
+        } else {
+          wx.hideLoading()
+          wx.showToast({
+            title: "你已经报名过抽奖了哦！",
+            icon: "none"
+          })
+        }
+      },
+      fail: (err) => {
+        wx.hideLoading()
+        wx.showToast({
+          title: "参与抽奖需要授权登录哦",
+          icon: "none"
+        })
+      }
+    })
   },
 
   /**
@@ -92,7 +176,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this._getList(this.data.events.length, 10)
   },
 
   /**

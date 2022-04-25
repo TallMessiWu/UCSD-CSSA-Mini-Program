@@ -1,5 +1,4 @@
 const app = getApp()
-const openid = app.globalData.openid
 const db = wx.cloud.database()
 const classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
 const cardDesciptionId = "fa24ce1a618254d803ecbabc034ef293"
@@ -54,6 +53,7 @@ Page({
     },
 
     onLogin() {
+        const openid = app.globalData.openid
         wx.showLoading({
             title: "等待授权中",
             mask: true
@@ -68,6 +68,7 @@ Page({
                 let info = await userCollection.where({
                     _openid: openid
                 }).get()
+                console.log(info)
                 // 用户第一次授权登录
                 if (info.data.length == 0) {
                     await userCollection.add({

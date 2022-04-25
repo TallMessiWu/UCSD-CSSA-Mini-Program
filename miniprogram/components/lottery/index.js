@@ -5,7 +5,8 @@ Component({
    */
   properties: {
     image: String,
-    title: String
+    title: String,
+    eventId: Number
   },
 
   /**

@@ -1,13 +1,12 @@
 <!-- 顶部导航栏 -->
-<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E"
-    capsule-color="white" title-color="white">
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E" capsule-color="white" title-color="white">
 </l-capsule-bar>
 
 <!-- 整体容器 -->
 <view class="container">
-    <e-lottery image="/images/icons/activity-activated.png" title="活动抽奖"></e-lottery>
-    <e-lottery image="/images/cssa-logo.jpg" title="CSAA"></e-lottery>
-    <e-lottery image="/images/icons/card.png" title="活动"></e-lottery>
+    <block wx:for="{{events}}" wx:key="index">
+        <e-lottery image="{{item.poster}}" title="{{item.title}}" bind:tap="register" data-_id="{{item._id}}"></e-lottery>
+    </block>
 </view>
 
 <!-- 占位 防止导航栏遮挡 -->

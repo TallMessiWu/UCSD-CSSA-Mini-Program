@@ -1,6 +1,6 @@
 .container {
   background-color: white;
-  border-radius: 100rpx;
+  border-radius: 15px;
   margin-top: 30rpx;
   width: 700rpx;
   height: 500rpx;
@@ -12,11 +12,11 @@
 }
 
 .poster {
-  border-radius: 100rpx;
+  border-radius: 15px;
   position:relative;
   top:0rpx;
   width: 700rpx;
-  height: 270rpx;
+  height: 300rpx;
 }
 
 .event-container {
