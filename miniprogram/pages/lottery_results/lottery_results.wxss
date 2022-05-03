@@ -28,24 +28,7 @@
   box-sizing: border-box;
   border-radius: 15px;
 }
-/* .front_container{
-  background-color: rgb(183, 142, 223);
-  width: 700rpx;
-  height: 500rpx;
-  margin-top: 30rpx;
-  margin-left: 30rpx;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 15px;
-}
-.front_header{
-  display: flex;
-  text-align: center;
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-} */
+
 .description_container{
   background-color: rgb(223, 237, 248);
   width: 700rpx;

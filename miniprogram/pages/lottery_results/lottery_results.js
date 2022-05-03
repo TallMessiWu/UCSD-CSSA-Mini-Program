@@ -35,7 +35,8 @@ Page({
     }],
     poster: "",
     title: "",
-    description: ""
+    description: "",
+    crown: ""
   },
 
   /**
@@ -57,7 +58,8 @@ Page({
       data_luck: info.luck,
       poster: info.poster,
       title: info.title,
-      description: info.description
+      description: info.description,
+      crown: info.crown.img
     })
     wx.hideLoading()
   },
