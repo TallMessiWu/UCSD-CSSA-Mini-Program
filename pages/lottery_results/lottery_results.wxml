@@ -1,0 +1,107 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E" capsule-color="white"
+  title-color="white">
+</l-capsule-bar>
+
+<!--title-->
+<view class= "title_container">
+  <text> 活动标题</text>
+</view>
+
+
+<!--poster-->
+<view class= "poster">
+  <block wx:for="{{events}}" wx:key="index">
+    <image src="{{item.poster}}" mode="aspectFit" class="img"></image>
+  </block>
+</view>
+
+<!--description-->
+<view class= "description_container">
+  <text>活动描述</text>
+</view>
+
+
+<!--front_container-->
+<!-- <view class="front_container">
+  <view class="front_header">
+    <text> 主标题 标题：构想抽奖题目的字数限定在30字左右，目前测试30字字字字</text>
+  </view>
+</view> -->
+
+<!--results-->
+<view class="result-info">
+  <l-collapse type="accordion" bindtap="GUP">
+    <l-collapse-item title="My result:" l-class="l-collapse-item" l-title-class="l-title">
+        <!--general_results-->
+        <view class= "general_results_container"> 
+          <!--first_prize-->
+          <view class="first_prize">
+            <view class='prize_title'>
+              <text class="message">一等奖</text> 
+            </view>
+            <view class= "touxiang1">
+              <image src= "/images/crown2.png" mode="aspectFill" class= "crown"></image>
+                  <e-userInfo-preview avatarUrl= "{{data_first.avatarUrl}}" nickname= "{{data_first.nickname}}"></e-userInfo-preview>
+            </view>
+          </view>
+              
+          <!--second_prize-->
+          <view wx:if="{{data_second.length <= 2}}">
+            <view class="second_prize">
+              <view class='prize_title'>
+                <text class="message">二等奖</text> 
+              </view>
+              <view class= "touxiang2">
+                <block wx:for= "{{data_second}}" wx:key="index">
+                  <view class= "touxiang3">
+                    <e-userInfo-preview avatarUrl= "{{item.avatarUrl}}" nickname= "{{item.nickname}}"></e-userInfo-preview>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+          <view wx:else> 
+            <view class="third_prize">
+              <view class='prize_title'>
+                <text class="message">二等奖</text> 
+              </view>
+              <block wx:for= "{{data_second}}" wx:key="index">
+                <view class="touxiang3">
+                <e-userInfo-preview avatarUrl= "{{item.avatarUrl}}" nickname= "{{item.nickname}}"></e-userInfo-preview>
+                </view>
+              </block>
+            </view>
+          </view>
+
+          <!--third_prize-->
+          <view class="third_prize">
+            <view class='prize_title'>
+              <text class="message">三等奖</text> 
+            </view>
+            <block wx:for= "{{data_third}}" wx:key="index">
+              <view class="touxiang3">
+                <e-userInfo-preview avatarUrl= "{{item.avatarUrl}}" nickname= "{{item.nickname}}"></e-userInfo-preview>
+              </view>
+            </block>
+          </view>
+
+          <!--lucky_prize-->
+          <view class="third_prize">
+            <view class='prize_title'>
+              <text class="message">运气奖</text> 
+            </view>
+              <block wx:for= "{{data_luck}}" wx:key="index">
+                <view class="touxiang3">
+                  <e-userInfo-preview avatarUrl= "{{item.avatarUrl}}" nickname= "{{item.nickname}}"></e-userInfo-preview>
+              </view>
+            </block>
+          </view>
+        </view>
+    </l-collapse-item>
+  </l-collapse>
+</view>
+
+
+
+
