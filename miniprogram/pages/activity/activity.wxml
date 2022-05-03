@@ -5,7 +5,7 @@
 <!-- 整体容器 -->
 <view class="container">
     <block wx:for="{{events}}" wx:key="index">
-        <e-lottery image="{{item.poster}}" title="{{item.title}}" bind:tap="register" data-_id="{{item._id}}"></e-lottery>
+        <e-lottery image="{{item.poster}}" title="{{item.title}}" deadline="{{item.deadline}}" bind:buttonTapped="register" data-_id="{{item._id}}"></e-lottery>
     </block>
 </view>
 

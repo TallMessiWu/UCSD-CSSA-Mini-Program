@@ -62,9 +62,12 @@
 
 .button-container {
   background-color: rgb(197, 33, 33);
-  left: 170rpx;
-  bottom: 20rpx;
-  width: 0rpx ;
-  height: 100rpx; 
+  position: relative;
+  left:400rpx;
+  top: 10rpx;
+  width: 250rpx;
+  height: 70rpx; 
   text-align: center;
+  line-height: 70rpx;
+  border-radius: 10px;
 }
