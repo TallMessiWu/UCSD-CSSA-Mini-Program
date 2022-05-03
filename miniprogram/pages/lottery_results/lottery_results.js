@@ -1,69 +1,65 @@
-// pages/lottery_results/lottery_results.js
+// pages/activity/activity.js
+import deviceUtil from "../../miniprogram_npm/lin-ui/utils/device-util"
+
+const app = getApp()
+const classesId = "8f9ff639611a410d00aaa7ba5e2491d6"
+const db = wx.cloud.database()
+const lotteryCollection = db.collection("lottery")
+const _ = db.command
+var count = 0
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    second_price_number: 4,
-    user_id1: [{
-      image: "/images/cssa-logo.jpg",
-      userText: "small shrimp1"
-    }, ],
-    user_id2: [{
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp2"
-      },
-    ],
-    user_id3: [{
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp2"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-    ],
-    user_id0: [{
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-      {
-        image: "/images/cssa-logo.jpg",
-        userText: "small shrimp1"
-      },
-    ]
+    _id: "",
+    events: [],
+    data_first: {
+      avatarUrl: "",
+      nickname: ""
+    },
+    data_second: [{
+      avatarUrl: "",
+      nickname: ""
+    }],
+    data_third: [{
+      avatarUrl: "",
+      nickname: ""
+    }],
+    data_luck: [{
+      avatarUrl: "",
+      nickname: ""
+    }],
+    poster: "",
+    title: "",
+    description: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: async function (options) {
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
+    this.setData({
+      _id: options._id
+    })
+    let info = (await lotteryCollection.doc(this.data._id).get()).data
+    this.setData({
+      data_first: info.first,
+      data_second: info.second,
+      data_third: info.third,
+      data_luck: info.luck,
+      poster: info.poster,
+      title: info.title,
+      description: info.description
+    })
+    wx.hideLoading()
   },
 
   /**
@@ -72,6 +68,7 @@ Page({
   onReady: function () {
 
   },
+
 
   /**
    * 生命周期函数--监听页面显示
@@ -104,14 +101,16 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  // 页面监听函数
+  onPageScroll() {}
+
 })
