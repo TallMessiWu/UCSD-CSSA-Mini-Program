@@ -1,0 +1,164 @@
+
+.title_container{
+  background-color: rgb(223, 237, 248);
+  width: 700rpx;
+  height: 100rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.poster{
+  width: 700rpx;
+  height: 400rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+/* .front_container{
+  background-color: rgb(183, 142, 223);
+  width: 700rpx;
+  height: 500rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.front_header{
+  display: flex;
+  text-align: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+} */
+.description_container{
+  background-color: rgb(223, 237, 248);
+  width: 700rpx;
+  height: 100rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+}
+.result-info {
+  background-color: rgb(223, 237, 248);
+  width: 700rpx;
+  border-radius: 15px;
+  margin-top: 30rpx;
+  padding-right: 10rpx;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.l-title {
+  margin-top: 5rpx;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  color: #C22A1E;
+}
+.general_results_container{
+  background-color: white;
+  width: 700rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.prize_title{
+  background-color: rgb(236, 236, 236);
+  width: 670rpx;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+.first_prize{
+  background-color: rgb(255, 255, 255);
+  width: 673rpx;
+  height: 308rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.second_prize{
+  background-color: rgb(255, 255, 255);
+  width: 673rpx;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20rpx;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.third_prize{
+  background-color: rgb(255, 255, 255);
+  width: 673rpx;
+  height: auto;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.touxiang3{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  
+}
+.crown{
+  height: 80rpx;
+  width: 105rpx;
+  margin: 0 auto;  /* 居中*/
+}
+.touxiang1{
+  margin: 0 auto;  /* 头像居中*/
+}
+.touxiang2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    
+  }
+.avatar{
+    width: 90rpx;
+    height: 90rpx;
+    margin: 0 auto;  /* 头像居中*/
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;  /* 内容将被剪裁以适合填充框 */
+}
+.userText{
+  font-size: 25rpx;
+}

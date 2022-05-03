@@ -1,0 +1,103 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E" capsule-color="white" title-color="white">
+</l-capsule-bar>
+
+<!--模板-->
+<view>
+  <!--img-->
+  <view class="img">
+    <view class="header">
+      <text> 主标题
+        标题：构想抽奖题目的字数限定在30字左右，目前测试30字字字字
+      </text>
+    </view>
+  </view>
+
+  <!--my_results-->
+
+  <view class="result-info">
+    <l-collapse type="accordion">
+      <l-collapse-item title="My result" l-class="l-collapse-item" item-id="0" l-title-class="l-title">
+        <view class="description">
+          <!-- <rich-text nodes="{{card_description}}"></rich-text> -->
+          <!--general_results-->
+          <view class="results_container">
+
+            <!--first_prize-->
+            <view class="first_prize">
+              <view class='prize_title'>
+                <text class="message">一等奖</text>
+              </view>
+              <view class="touxiang">
+                <image src="/images/crown2.png" mode="aspectFill" class="crown"></image>
+                <block wx:for="{{user_id1}}" wx:key="index">
+                  <view class="page-body-info ">
+                    <image src="{{item.image}}" class="userinfo"></image>
+                    <text class="userText">{{item.userText}}</text>
+                  </view>
+                </block>
+              </view>
+            </view>
+
+
+            <!--second_prize-->
+            <view wx:if="{{user_id2.length <= 2}}">
+              <view class="second_prize">
+                <view class='prize_title'>
+                  <text class="message">二等奖</text>
+                </view>
+                <view class="touxiang2">
+                  <block wx:for="{{user_id2}}" wx:key="index">
+                    <e-userInfo-preview image="{{item.image}}" userText="{{item.userText}}"></e-userInfo-preview>
+                  </block>
+                </view>
+              </view>
+            </view>
+
+            <view wx:else>
+              <view class="third_prize">
+                <view class='prize_title'>
+                  <text class="message">二等奖</text>
+                </view>
+                <block wx:for="{{user_id2}}" wx:key="index">
+                  <view class="userInfo">
+                    <e-userInfo-preview image="{{item.image}}" userText="{{item.userText}}"></e-userInfo-preview>
+                  </view>
+                </block>
+              </view>
+            </view>
+
+
+
+
+            <!--third_prize-->
+            <view class="third_prize">
+              <view class='prize_title'>
+                <text class="message">三等奖</text>
+              </view>
+              <block wx:for="{{user_id3}}" wx:key="index">
+                <view class="userInfo">
+                  <e-userInfo-preview image="{{item.image}}" userText="{{item.userText}}"></e-userInfo-preview>
+                </view>
+              </block>
+            </view>
+
+            <!--lucky_prize-->
+            <view class="third_prize">
+              <view class='prize_title'>
+                <text class="message">运气奖</text>
+              </view>
+              <block wx:for="{{user_id0}}" wx:key="index">
+                <view class="userInfo">
+                  <e-userInfo-preview image="{{item.image}}" userText="{{item.userText}}"></e-userInfo-preview>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </l-collapse-item>
+    </l-collapse>
+  </view>
+
+
+</view>

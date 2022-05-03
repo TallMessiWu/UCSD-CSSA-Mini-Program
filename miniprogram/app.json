@@ -7,7 +7,8 @@
     "pages/discovery/discovery",
     "pages/collection/collection",
     "pages/article/article",
-    "pages/activity/activity"
+    "pages/activity/activity",
+    "pages/lottery_results/lottery_results"
   ],
   "window": {
     "navigationBarBackgroundColor": "#C22A1E",

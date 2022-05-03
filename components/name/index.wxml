@@ -1,0 +1,10 @@
+
+  <view class="page-body-info ">
+    <view class= "img">
+      <image src= "{{avatarUrl}}" class="avatar"></image>
+    </view>
+    <text class= "userText">{{nickname}}</text>
+  </view>
+
+
+  
