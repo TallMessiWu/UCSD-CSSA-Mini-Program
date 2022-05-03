@@ -2,7 +2,7 @@
     <image class="thumbnail" src="{{image}}" mode="aspectFill"></image>
     <view class="text-container">
         <text class="title">{{title}}</text>
-        <text class="summary">{{summary}}</text>
+        <text wx:if="{{summary}}" class="summary">{{summary}}</text>
     </view>
 
 </view>

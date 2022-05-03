@@ -9,7 +9,7 @@
   <!-- 搜索栏 -->
   <view class="search-bar-container">
     <l-search-bar l-class="l-search-bar" placeholder="{{searchTitle}}" value="{{input}}" shape="circle"
-      bg-color="#ffffff" show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch"
+      bg-color="#ffffff" show-cancel="{{false}}" bind:linchange="onSearch"
       bind:lincancel="onSearchCancel" bind:linconfirm="onSearch" bind:linclear="onSearchCancel" />
     <!-- 分割线 -->
     <view class="hr"></view>

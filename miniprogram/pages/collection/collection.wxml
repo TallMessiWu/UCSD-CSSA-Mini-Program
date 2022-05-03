@@ -1,12 +1,14 @@
-<l-capsule-bar home-page="/pages/welcome/welcome" title="{{collectionName}}" bg-color="#C22A1E" capsule-color="white"
-    title-color="white">
+<l-capsule-bar home-page="/pages/welcome/welcome" title="{{collectionName}}" bg-color="#C22A1E" capsule-color="white" title-color="white">
 </l-capsule-bar>
 
 <view class="container">
-    <block wx:for="{{articles}}" wx:key="index">
-        <e-article-preview image="{{item.thumbnail}}" title="{{item.title}}" summary="{{item.summary}}" bind:tap="onTap" data-article="{{item}}"></e-article-preview>
-    </block>
-    <view class="not-found" wx:if="{{articles.length == 0}}">
-        <text>暂无</text>
-    </view>
+  <block wx:for="{{articles}}" wx:key="index">
+    <e-article-preview image="{{item.thumbnail}}" title="{{item.title}}" summary="{{item.summary}}" bind:tap="onTap" data-article="{{item}}"></e-article-preview>
+  </block>
+  <view class="not-found" wx:if="{{articles.length == 0}}">
+    <text>暂无</text>
+  </view>
 </view>
+
+<!-- 占位 防止导航栏遮挡 -->
+<view class="stand-view"></view>
