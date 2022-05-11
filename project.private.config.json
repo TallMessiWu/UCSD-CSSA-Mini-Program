@@ -1,54 +1,11 @@
 {
-  "setting": {},
   "condition": {
     "miniprogram": {
       "list": [
         {
-          "name": "pages/class-chat/class-chat",
-          "pathName": "pages/class-chat/class-chat",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/cssa-card/cssa-card",
-          "pathName": "pages/cssa-card/cssa-card",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/welcome/welcome",
-          "pathName": "pages/welcome/welcome",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/how-to-get-card/how-to-get-card",
-          "pathName": "pages/how-to-get-card/how-to-get-card",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/discovery/discovery",
-          "pathName": "pages/discovery/discovery",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/collection/collection",
-          "pathName": "pages/collection/collection",
-          "query": "name=精彩活动",
-          "scene": null
-        },
-        {
-          "name": "pages/article/article",
-          "pathName": "pages/article/article",
-          "query": "name=%E7%B2%BE%E5%BD%A9%E6%B4%BB%E5%8A%A8",
-          "scene": null
-        },
-        {
           "name": "",
-          "pathName": "pages/activity/activity",
-          "query": "",
+          "pathName": "pages/lottery_results/lottery_results",
+          "query": "_id=6f49505e6264a36101efbb9d27e19df3",
           "launchMode": "default",
           "scene": null
         }
@@ -57,4 +14,5 @@
   },
   "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "libVersion": "2.24.0"
+
 }

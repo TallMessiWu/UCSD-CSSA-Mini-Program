@@ -84,8 +84,9 @@
     padding-right: 30rpx;
 }
 
-.merchants {
-    width: 600rpx;
+
+.merchants-list {
+    width: 550rpx;
     height: 800rpx;
 }
 

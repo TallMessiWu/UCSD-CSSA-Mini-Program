@@ -1,0 +1,29 @@
+.page-body-info {
+  display: flex;
+  text-align: center; 
+  flex-direction: column;
+  margin: 20rpx;
+  width: 100rpx;
+
+}
+.img{
+  display: flex;
+  text-align: center; 
+  justify-content: center;
+}
+.avatar{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;  /* 内容将被剪裁以适合填充框 */
+}
+
+.userText{
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 25rpx;
+  width: 100rpx;
+  text-overflow: ellipsis;
+}
+ 

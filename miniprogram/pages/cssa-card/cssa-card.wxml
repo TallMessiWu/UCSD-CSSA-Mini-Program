@@ -39,7 +39,7 @@
 
     <!-- CSSA卡介绍 -->
     <view class="card-info">
-        <l-collapse type="accordion" expand-item-id="{{['0']}}">
+        <l-collapse type="accordion" expand-item-id="{{['0', '1']}}">
             <l-collapse-item title="CSSA卡介绍" l-class="l-collapse-item" item-id="0" l-title-class="l-title">
                 <view class="description">
                     <rich-text nodes="{{card_description}}"></rich-text>
@@ -47,7 +47,7 @@
             </l-collapse-item>
             <l-collapse-item title="已签约商家" l-class="l-collapse-item" item-id="1" l-title-class="l-title">
                 <view class="description">
-                    <image src="{{signed_merchants}}" class="merchants" mode="aspectFit" bind:tap="onImageTap" bind:longpress="onImageTap"></image>
+                    <image src="{{signed_merchants}}" class="merchants-list" mode="aspectFit" bind:tap="onImageTap" bind:longpress="onImageTap"></image>
                 </view>
             </l-collapse-item>
         </l-collapse>

@@ -29,7 +29,7 @@
       "outputPath": ""
     },
     "useIsolateContext": false,
-    "userConfirmedUseIsolateContext": false,
+
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
@@ -42,32 +42,10 @@
     "useStaticServer": true
   },
   "appid": "wx37643ed83b67a2c4",
-  "projectname": "CSSA%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+
+  "projectname": "UCSD-CSSA-Mini-Program",
   "libVersion": "2.21.4",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
-  "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
-        }
-      ]
-    }
-  },
   "compileType": "miniprogram",
   "srcMiniprogramRoot": "miniprogram/",
   "packOptions": {
@@ -78,5 +56,6 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {}
 }
