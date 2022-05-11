@@ -4,7 +4,9 @@
 
 <!--title-->
 <view class="title_container">
-  <text>活动标题</text>
+
+  <text class="title">{{title}}</text>
+
 </view>
 
 
@@ -15,23 +17,15 @@
 
 <!--description-->
 <view class="description_container">
-  <text>活动描述</text>
+  <text>{{description}}</text>
 </view>
 
-
-<!--front_container-->
-<!-- <view class="front_container">
-  <view class="front_header">
-    <text> 主标题 标题：构想抽奖题目的字数限定在30字左右，目前测试30字字字字</text>
-  </view>
-</view> -->
 
 <!--results-->
 <view class="result-info">
   <l-collapse type="accordion">
-    <l-collapse-item title="My result:" l-class="l-collapse-item" l-title-class="l-title">
+    <l-collapse-item title="抽奖结果:" l-class="l-collapse-item" l-title-class="l-title">
       <!--general_results-->
-      <view class="general_results_container">
         <!--first_prize-->
         <view class="first_prize">
           <view class='prize_title'>
@@ -94,7 +88,7 @@
             </view>
           </block>
         </view>
-      </view>
+      
     </l-collapse-item>
   </l-collapse>
 </view>

@@ -35,7 +35,8 @@ Page({
     }],
     poster: "",
     title: "",
-    description: ""
+    description: "",
+
   },
 
   /**
@@ -49,6 +50,7 @@ Page({
     this.setData({
       _id: options._id
     })
+  
     let info = (await lotteryCollection.doc(this.data._id).get()).data
     this.setData({
       data_first: info.first,
@@ -57,8 +59,10 @@ Page({
       data_luck: info.luck,
       poster: info.poster,
       title: info.title,
-      description: info.description
+      description: info.description,
+
     })
+    console.log(info)
     wx.hideLoading()
   },
 
