@@ -4,7 +4,9 @@
 
 <!--title-->
 <view class="title_container">
+
   <text class="title">{{title}}</text>
+
 </view>
 
 
@@ -18,10 +20,11 @@
   <text>{{description}}</text>
 </view>
 
+
 <!--results-->
 <view class="result-info">
   <l-collapse type="accordion">
-    <l-collapse-item title="My result:" l-class="l-collapse-item" l-title-class="l-title">
+    <l-collapse-item title="抽奖结果:" l-class="l-collapse-item" l-title-class="l-title">
       <!--general_results-->
         <!--first_prize-->
         <view class="first_prize">

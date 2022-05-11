@@ -36,6 +36,7 @@ Page({
     poster: "",
     title: "",
     description: "",
+
   },
 
   /**
@@ -59,7 +60,7 @@ Page({
       poster: info.poster,
       title: info.title,
       description: info.description,
-      
+
     })
     console.log(info)
     wx.hideLoading()

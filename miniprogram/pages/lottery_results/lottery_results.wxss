@@ -32,6 +32,7 @@
   box-sizing: border-box;
   border-radius: 15px;
 }
+
 .description_container{
   background-color: rgb(223, 237, 248);
   width: 700rpx;
