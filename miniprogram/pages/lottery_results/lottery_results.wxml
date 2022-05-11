@@ -5,6 +5,7 @@
 <!--title-->
 <view class="title_container">
 
+
   <text class="title">{{title}}</text>
 
 </view>
@@ -32,6 +33,7 @@
             <text class="message">一等奖</text>
           </view>
           <view class="touxiang1">
+
             <image src="/images/crown2.png" mode="aspectFill" class="crown"></image>
             <e-userInfo-preview avatarUrl="{{data_first.avatarUrl}}" nickname="{{data_first.nickname}}"></e-userInfo-preview>
           </view>
@@ -88,7 +90,6 @@
             </view>
           </block>
         </view>
-      
     </l-collapse-item>
   </l-collapse>
 </view>

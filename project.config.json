@@ -29,6 +29,7 @@
       "outputPath": ""
     },
     "useIsolateContext": false,
+
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
@@ -41,6 +42,7 @@
     "useStaticServer": true
   },
   "appid": "wx37643ed83b67a2c4",
+
   "projectname": "UCSD-CSSA-Mini-Program",
   "libVersion": "2.21.4",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
