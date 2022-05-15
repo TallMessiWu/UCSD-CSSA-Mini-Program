@@ -26,11 +26,7 @@
 .swiper {
   width: 700rpx;
   height: 400rpx;
-}
-
-.headlines {
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
 .img {
@@ -48,11 +44,13 @@
   bottom: 50rpx;
   font-size: 32rpx;
   font-weight: 700;
+  background-color: rgba(96,96,96, 0.5);
+  border-radius: 15px;
 }
 
 .collection-container {
   width: 700rpx;
-  height: 250rpx;
+  height: 240rpx;
   margin-top: 30rpx;
   display: flex;
   flex-wrap: wrap;
@@ -69,14 +67,10 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  padding-bottom: 25rpx;
 }
 
-/* 给前四个元素下面加点距离 */
-.collection:nth-child(-n+4) {
-  padding-bottom: 10rpx;
-}
-
-/* 给前四个元素加上下边框 */
+/* 给前四个元素加下边框 */
 .collection:nth-child(-n+4)::before {
   content: "";
   display: block;
@@ -88,14 +82,14 @@
 }
 
 
-/* 给所有元素加上右边框 */
+/* 给所有元素加右边框 */
 .collection::after {
   content: "";
   display: block;
   position: absolute;
   right: 0;
   width: 1rpx;
-  height: 110%;
+  height: 100%;
   background-color: silver;
 }
 
@@ -111,9 +105,9 @@
 }
 
 .collection-text {
+  display: block;
   height: 25rpx;
   font-size: smaller;
-  margin-bottom: 10rpx;
 }
 
 .starred-container {

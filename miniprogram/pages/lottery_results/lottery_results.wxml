@@ -4,10 +4,7 @@
 
 <!--title-->
 <view class="title_container">
-
-
   <text class="title">{{title}}</text>
-
 </view>
 
 

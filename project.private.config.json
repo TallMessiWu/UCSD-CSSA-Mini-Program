@@ -8,6 +8,13 @@
           "query": "_id=6f49505e6264a36101efbb9d27e19df3",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/discovery/discovery",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
