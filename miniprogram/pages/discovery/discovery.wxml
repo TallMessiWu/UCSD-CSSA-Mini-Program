@@ -1,6 +1,5 @@
 <!-- 顶部导航栏 -->
-<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="UCSD CSSA" bg-color="#C22A1E"
-  capsule-color="white" title-color="white">
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="UCSD CSSA" bg-color="#C22A1E" capsule-color="white" title-color="white">
 </l-capsule-bar>
 
 <!-- 整体容器 -->
@@ -8,9 +7,7 @@
 
   <!-- 搜索栏 -->
   <view class="search-bar-container">
-    <l-search-bar l-class="l-search-bar" placeholder="{{searchTitle}}" value="{{input}}" shape="circle"
-      bg-color="#ffffff" show-cancel="{{false}}" bind:linchange="onSearch"
-      bind:lincancel="onSearchCancel" bind:linconfirm="onSearch" bind:linclear="onSearchCancel" />
+    <l-search-bar l-class="l-search-bar" placeholder="{{searchTitle}}" value="{{input}}" shape="circle" bg-color="#ffffff" show-cancel="{{false}}" bind:linchange="onSearch" bind:lincancel="onSearchCancel" bind:linconfirm="onSearch" bind:linclear="onSearchCancel" />
     <!-- 分割线 -->
     <view class="hr"></view>
   </view>
@@ -18,14 +15,11 @@
   <!-- 非搜索时的页面 -->
   <view wx:if="{{!isSearching}}">
     <!-- 轮播图 -->
-    <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="white" indicator-color="gray"
-      autoplay="{{true}}" interval="2000" duration="1000" circular="{{true}}">
+    <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="white" indicator-color="gray" autoplay="{{true}}" interval="2000" duration="1000" circular="{{true}}">
       <block wx:for="{{headlines}}" wx:key="index">
         <swiper-item bindtap="onHeadlineTap" data-article="{{item}}">
-          <view class="headlines">
-            <image src="{{item.poster}}" mode="aspectFill" class="img"></image>
-            <text class="title">{{item.articleInfo[0].title}}</text>
-          </view>
+          <image src="{{item.poster}}" mode="aspectFill" class="img" />
+          <text class="title">{{item.articleInfo[0].title}}</text>
         </swiper-item>
       </block>
     </swiper>
@@ -34,10 +28,8 @@
     <view class="collection-container">
       <block wx:for="{{collections}}" wx:key="index">
         <view class="collection" bind:tap="onCollectionTap" data-name="{{item.text}}">
-          <image class="collection-img" src="{{item.src}}" mode="aspectFit"></image>
-          <view class="collection-text">
-            <text>{{item.text}}</text>
-          </view>
+          <image class="collection-img" src="{{item.src}}" mode="aspectFit" />
+          <text class="collection-text">{{item.text}}</text>
         </view>
       </block>
     </view>
@@ -55,8 +47,7 @@
 
       <view class="item-container">
         <block wx:for="{{starredArticles}}" wx:key="index">
-          <e-starred-article-preview image="{{item.thumbnail}}" title="{{item.title}}" bind:tap="onArticleTap"
-            data-article="{{item}}"></e-starred-article-preview>
+          <e-starred-article-preview image="{{item.thumbnail}}" title="{{item.title}}" bind:tap="onArticleTap" data-article="{{item}}"></e-starred-article-preview>
         </block>
       </view>
     </view>
