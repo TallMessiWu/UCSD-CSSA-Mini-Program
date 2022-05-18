@@ -69,8 +69,6 @@ Component({
     attached(){
       var time = new Date().getTime();
       // this.setData({
-      //   total_micro_second: this.properties.deadline - time
-      // })
       this.countdown(this)
     }
    }
