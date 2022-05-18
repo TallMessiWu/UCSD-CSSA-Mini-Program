@@ -16,6 +16,7 @@ Component({
   data: {
     clock: '',
     total_micro_second : 36000000,
+    total_micro_second: 0
   },
 
   /**
