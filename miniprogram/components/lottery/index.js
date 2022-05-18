@@ -15,7 +15,6 @@ Component({
    */
   data: {
     clock: '',
-    total_micro_second : 36000000,
     total_micro_second: 0
   },
 
@@ -69,7 +68,9 @@ Component({
   lifetimes:{
     attached(){
       var time = new Date().getTime();
-      // this.setData({
+      this.setData({
+        total_micro_second: this.properties.deadline - time
+      })
       this.countdown(this)
     }
    }
